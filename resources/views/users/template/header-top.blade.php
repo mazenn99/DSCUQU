@@ -32,27 +32,7 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
         </nav>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-sm-offset-1">
-                    <div class="intro-text  wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-
-                        <h1>Education A Global Community</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscingl elit sed diam nonumm nibhy
-                            euismod<br> tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        <a href="#." class="el-btn-regular slider-btn-left">Get Started now</a> <a href="#."
-                                                                                                   class="el-btn-regular">View
-                            Courses</a>
-                    </div>
-                </div>
-                <div class="col-sm-12 text-center">
-                    <div class="mouse-icon-box">
-                        <a href="#" class="mouse-icon"></a>
-                    </div>
-                </div>
-            </div><!-- /.row -->
-        </div><!-- /.container -->
+        @yield('photo')
     </div>
 </header>
 <!--  End header section-->

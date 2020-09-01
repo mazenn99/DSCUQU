@@ -125,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/htdocs/laravel/mojeebCourse" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -135,14 +135,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\lang\ar" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\app\Http\Controllers" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\asset\site" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\routes" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\users" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,6 +163,7 @@
       <workItem from="1598809183182" duration="8235000" />
       <workItem from="1598891091616" duration="579000" />
       <workItem from="1598902851139" duration="4414000" />
+      <workItem from="1598933724430" duration="10196000" />
     </task>
     <servers />
   </component>
@@ -169,6 +171,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598934576101">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598934576101" />
+    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1598943889789">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598943889789" />
     <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1598907733546">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -185,17 +195,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
-    <state x="2704" y="426" key="NewPhpFileDialog" timestamp="1598904364240">
+    <state x="2704" y="426" key="NewPhpFileDialog" timestamp="1598937129282">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598904364240" />
+    <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598937129282" />
     <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1598907096913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907096913" />
-    <state x="2373" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598825963902">
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598940120230">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2373" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598825963902" />
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598940120230" />
   </component>
 </project>

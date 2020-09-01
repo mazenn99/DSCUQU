@@ -1,6 +1,33 @@
 @extends('users.template.master')
 @section('title' , 'الصفحة الرئيسية')
 @section('content')
+    @section('photo')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-offset-1">
+                    <div class="intro-text  wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+
+                        <h1>Education A Global Community</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscingl elit sed diam nonumm nibhy
+                            euismod<br> tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <a href="#." class="el-btn-regular slider-btn-left">Get Started now</a> <a href="#."
+                                                                                                   class="el-btn-regular">View
+                            Courses</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <div class="mouse-icon-box">
+                        <a href="#" class="mouse-icon"></a>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    @endsection
+    <body class="home_version_03 home_version_02 home_version_04">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
     <!-- Start Welcome Area section -->
     <section class="Welcome-area">
         <div class="container">

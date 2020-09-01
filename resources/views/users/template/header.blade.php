@@ -28,8 +28,4 @@
     <link rel="stylesheet" href="{{asset('site')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('site')}}/css/responsive.css">
 </head>
-<body class="home_version_03 home_version_02 home_version_04">
-<!-- Preloader -->
-<div id="preloader">
-    <div id="status">&nbsp;</div>
-</div>
+

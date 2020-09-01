@@ -17,9 +17,9 @@ class CreateAdminsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->text('speaker_details');
+            $table->text('speaker_details')->nullable();
             $table->string('password');
-            $table->boolean('is_super');
+            $table->boolean('is_super')->default('0');
             $table->timestamps();
         });
     }

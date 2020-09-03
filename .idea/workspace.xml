@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fee78a14-52ed-47f8-bdc3-0c77a2fbcf21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Courses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174024_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174024_create_admins_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CoursesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CoursesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174707_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174707_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174726_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174726_create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/relations/2020_08_30_220533_add_relations_comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/relations/2020_08_30_220533_add_relations_comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/courses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/site/images/comment" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -145,15 +157,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\comment" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\resources\lang\ar" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\app\Http\Controllers" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\asset\site" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
     </key>
   </component>
   <component name="RunManager">
@@ -174,7 +186,11 @@
       <workItem from="1598891091616" duration="579000" />
       <workItem from="1598902851139" duration="4414000" />
       <workItem from="1598933724430" duration="10725000" />
-      <workItem from="1598989671116" duration="10205000" />
+      <workItem from="1598989671116" duration="10699000" />
+      <workItem from="1599026872125" duration="1636000" />
+      <workItem from="1599064831054" duration="1418000" />
+      <workItem from="1599076086427" duration="9464000" />
+      <workItem from="1599107405986" duration="13358000" />
     </task>
     <servers />
   </component>
@@ -182,14 +198,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598934576101">
+    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599113256330">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598934576101" />
-    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1598943889789">
+    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599113256330" />
+    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1599120959383">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598943889789" />
+    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120959383" />
     <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1598907733546">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -206,17 +222,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
-    <state x="2704" y="426" key="NewPhpFileDialog" timestamp="1598990449089">
+    <state x="2704" y="426" key="NewPhpFileDialog" timestamp="1599119248091">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598990449089" />
+    <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599119248091" />
     <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1598907096913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907096913" />
-    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598997500996">
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1599120176489">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598997500996" />
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120176489" />
   </component>
 </project>

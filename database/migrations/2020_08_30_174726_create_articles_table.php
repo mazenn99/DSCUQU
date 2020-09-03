@@ -17,6 +17,9 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('section_id');
             $table->unsignedBigInteger('admins_id');
+            $table->string('slug');
+            $table->text('hero-photo')->nullable();
+            $table->unsignedBigInteger('visitor')->default('0');
             $table->string('title' , 50);
             $table->text('content');
             $table->timestamps();

@@ -16,7 +16,6 @@
             @foreach($courses as $course)
                 <a href="{{route('courses.show' , $course->slug)}}">
                     <div class="row event-body-content">
-
                         <div class="col-sm-12 events-full-box">
                             <div class="events-single-box">
                                 <div class="row">
@@ -70,12 +69,20 @@
                     </div>
                 </a>
             @endforeach
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                    {{$courses->links()}}
-                </ul>
-            </nav>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+
+                                {{$courses->links()}}
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
         </div>
     </section>
     <!-- ./ End Teachers Area section -->
+    </body>
 @endsection

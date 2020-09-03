@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
-use App\Models\Courses;
+use App\Models\Articles;
+use App\Models\Comments;
+use App\Models\Section;
 use Illuminate\Http\Request;
+use PhpParser\Builder;
 
-class CoursesController extends Controller
+class ArticlesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +18,8 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        $courses = Courses::where('status' , 1)->paginate(5);
-        return view('users.courses' , compact('courses'));
+        $articles = Articles::orderBy('id' , 'DESC')->paginate(8);
+        return view('users.articles' , compact('articles'));
     }
 
     /**
@@ -43,13 +46,13 @@ class CoursesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Courses $slug
+     * @param  Articles  $slug
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
     {
-        $course = Courses::where('slug' , $slug)->first();
-        return view('users.CourseDetails' ,compact('course'));
+        $article =  Articles::where('slug' , $slug)->first();
+        return view('users.post' , compact('article'));
     }
 
     /**

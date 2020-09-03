@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Courses extends Model
 {
 
+    protected $fillable = [''];
+
     public function getSex() {
         if($this->sex == 1) {
             return "<span class='text-dark'><i class='fa fa-male event-icon'></i> male</span>";

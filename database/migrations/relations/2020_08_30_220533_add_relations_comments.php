@@ -19,6 +19,12 @@ class AddRelationsComments extends Migration
                 ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+
+            $table->foreign('article_id')
+                ->references('id')
+                ->on('articles')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/' , 'HomeController');
 Route::resource('courses' , 'CoursesController');
+Route::resource('articles' , 'ArticlesController');

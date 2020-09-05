@@ -15,6 +15,7 @@ $factory->define(\App\Models\Courses::class, function (Faker $faker) {
     return [
         'admins_id'         => \App\Models\Admins::find(1),
         'title'             => $course[$key],
+        'speaker_id'        => \App\Models\Speakers::find(1),
         'details'           => $faker->text('200'),
         'picture'           => $faker->imageUrl('485' , '285'),
         'slug'              => $faker->slug,

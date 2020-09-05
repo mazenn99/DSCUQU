@@ -27,5 +27,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('site')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('site')}}/css/responsive.css">
+    @yield('style')
 </head>
 

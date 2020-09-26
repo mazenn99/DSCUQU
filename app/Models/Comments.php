@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comments extends Model
 {
+    protected $fillable = ['users_id' , 'article_id' , 'content' , 'created_at'];
     public $timestamps = FALSE;
 
     public function users() {
@@ -21,4 +22,9 @@ class Comments extends Model
             return $this->users->name;
         }
     }
+
+    public function articles() {
+        return $this->belongsTo(Articles::class , 'article_id');
+    }
+
 }

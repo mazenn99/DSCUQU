@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('/' , 'HomeController');
-Route::resource('courses' , 'CoursesController');
+Route::resource('All-courses' , 'CoursesController');
+Route::post('register-course' , 'CoursesController@registerAction')->name('register-course');
 Route::resource('articles' , 'ArticlesController');
 Route::resource('profile' , 'SpeakersController');
+Route::post('save-comment' , 'ArticlesController@saveComment')->name('save-comment');

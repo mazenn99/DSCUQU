@@ -6,12 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="fee78a14-52ed-47f8-bdc3-0c77a2fbcf21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CoursesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CoursesFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174024_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174024_create_admins_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174537_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174537_create_courses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Speakers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Speakers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Type_courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Type_courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/courses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Afrahy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -148,19 +165,26 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\users" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\super" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images\icon" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\comment" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\resources\lang\ar" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\app\Http\Controllers" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\public" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\asset\site" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="php artisan config:cache" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -186,7 +210,40 @@
       <workItem from="1599076086427" duration="9464000" />
       <workItem from="1599107405986" duration="13677000" />
       <workItem from="1599189297368" duration="8041000" />
-      <workItem from="1599335280710" duration="5879000" />
+      <workItem from="1599335280710" duration="6416000" />
+      <workItem from="1599361318172" duration="9899000" />
+      <workItem from="1599563267817" duration="278000" />
+      <workItem from="1599632439224" duration="894000" />
+      <workItem from="1599684845534" duration="1182000" />
+      <workItem from="1599687153737" duration="3553000" />
+      <workItem from="1599714026251" duration="5498000" />
+      <workItem from="1599893419591" duration="70000" />
+      <workItem from="1599893556587" duration="34000" />
+      <workItem from="1599893651236" duration="603000" />
+      <workItem from="1600066097227" duration="1961000" />
+      <workItem from="1600071968174" duration="5781000" />
+      <workItem from="1600259214492" duration="493000" />
+      <workItem from="1600323074665" duration="1777000" />
+      <workItem from="1600448570976" duration="1620000" />
+      <workItem from="1600506163795" duration="17510000" />
+      <workItem from="1600537762941" duration="958000" />
+      <workItem from="1600599819068" duration="9860000" />
+      <workItem from="1600685959713" duration="14719000" />
+      <workItem from="1600718187726" duration="584000" />
+      <workItem from="1600752161653" duration="5005000" />
+      <workItem from="1600757565845" duration="11314000" />
+      <workItem from="1600772359130" duration="116000" />
+      <workItem from="1600772494317" duration="126000" />
+      <workItem from="1600772637438" duration="1022000" />
+      <workItem from="1600775036362" duration="7078000" />
+      <workItem from="1600870066967" duration="3102000" />
+      <workItem from="1600890701945" duration="1457000" />
+      <workItem from="1600929825173" duration="1309000" />
+      <workItem from="1600941960935" duration="14258000" />
+      <workItem from="1600967591193" duration="12922000" />
+      <workItem from="1601031081722" duration="1593000" />
+      <workItem from="1601049177322" duration="13081000" />
+      <workItem from="1601100728766" duration="2576000" />
     </task>
     <servers />
   </component>
@@ -194,47 +251,79 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599113256330">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="671" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1599690485693">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="671" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599690485693" />
+    <state x="634" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599718334686">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2554" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599113256330" />
-    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1599121044657">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="634" y="245" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599718334686" />
+    <state x="343" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600947572900">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="343" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600947572900" />
+    <state x="559" y="174" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601071988056">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="559" y="174" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601071988056" />
+    <state x="634" y="174" key="FileChooserDialogImpl" timestamp="1601102604432">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599121044657" />
-    <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1598907733546">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="634" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1601102604432" />
+    <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1601073818891">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733546" />
-    <state width="1851" height="277" key="GridCell.Tab.0.center" timestamp="1598907733545">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1851" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
+    <state width="1851" height="277" key="GridCell.Tab.0.center" timestamp="1601073818891">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
-    <state width="1851" height="277" key="GridCell.Tab.0.left" timestamp="1598907733545">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1851" height="277" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
+    <state width="1851" height="277" key="GridCell.Tab.0.left" timestamp="1601073818890">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
-    <state width="1851" height="277" key="GridCell.Tab.0.right" timestamp="1598907733545">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1851" height="277" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818890" />
+    <state width="1851" height="277" key="GridCell.Tab.0.right" timestamp="1601073818891">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
-    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1599194490332">
+    <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
+    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601101177096">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599119248091" />
-    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599194490331" />
-    <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599192823756">
+    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601101177096" />
+    <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600695752803">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599192823756" />
+    <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1600695752803" />
     <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1598907096913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907096913" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1599341514100">
+    <state x="448" y="242" key="run.anything.popup" timestamp="1601051747519">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="448" y="242" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601051747519" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601073430151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120176489" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1599341514100" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601073430151" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Models/Articles.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

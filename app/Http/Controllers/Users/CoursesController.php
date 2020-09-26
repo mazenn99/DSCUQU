@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use App\Models\Courses;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CoursesController extends Controller
 {
@@ -37,7 +38,7 @@ class CoursesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'hi';
     }
 
     /**
@@ -51,6 +52,13 @@ class CoursesController extends Controller
         $course = Courses::where('slug' , $slug)->first();
         return view('users.CourseDetails' ,compact('course'));
     }
+
+    public function registerAction(Request $request) {
+        $course = Courses::select('id')->find($request->input('CourseID'));
+        $course->usersCourses()->sync(Auth::id());
+        return 200;
+    }
+
 
     /**
      * Show the form for editing the specified resource.

@@ -51,6 +51,12 @@
             z-index: -1;
         }
 
+        .btn-primary
+        {color:#fff;
+            background-color:#337ab7;
+            border-color:#2e6da4
+        }
+
         .our-team .picture img {
             width: 100%;
             height: auto;
@@ -160,9 +166,13 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
+                                                                                <button id="register"
+                                                                                        class="btn btn-primary"
+                                                                                        value="{{$course->id}}"
+                                                                                >Register
+                                                                                </button>
                                                                             </div>
                                                                         </div>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -171,8 +181,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                         <div class="col-sm-12 col-md-12">
                                             <div class="more-events">
                                                 <div class="row">
@@ -185,20 +193,23 @@
                                                                          class="img-responsive">
                                                                 </div>
                                                                 <div class="blog-content">
-                                                                    <h4><a href="{{route('courses.show' , $lastCourse->slug)}}">{{$lastCourse->title}}</a></h4>
+                                                                    <h4>
+                                                                        <a href="{{route('All-courses.show' , $lastCourse->slug)}}">{{$lastCourse->title}}</a>
+                                                                    </h4>
                                                                     <p class="blog-time">
 												<span>
 													<i class="fa fa-calendar event-icon"></i>
 													{{$lastCourse->course_date}}
 												</span>
-{{--                                                                        <span>--}}
-{{--													<i class="fa fa-comment"></i>--}}
-{{--													12--}}
-{{--												</span>--}}
+                                                                        {{--                                                                        <span>--}}
+                                                                        {{--													<i class="fa fa-comment"></i>--}}
+                                                                        {{--													12--}}
+                                                                        {{--												</span>--}}
                                                                     </p>
                                                                     <div class="content-bottom ">
                                                                         <p>{{\Illuminate\Support\Str::limit($lastCourse->details , 50)}}</p>
-                                                                        <span class="first-item"><a href="{{route('courses.show' , $lastCourse->slug)}}">Read More<i
+                                                                        <span class="first-item"><a
+                                                                                href="{{route('All-courses.show' , $lastCourse->slug)}}">Read More<i
                                                                                     class="fa fa-long-arrow-right blog-btn-icon"></i></a></span>
                                                                     </div>
                                                                 </div>
@@ -210,14 +221,41 @@
                                         </div><!--End .row-->
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
+    @endsection
+    @section('script')
+        <script>
+            $('#register').on('click' , function() {
+                let btnVal = $(this).val();
+                $.ajax({
+                    url : '{{route('register-course')}}',
+                    method : 'POST',
+                    data : {
+                        'CourseID' : btnVal,
+                        '_token'   : '{{csrf_token()}}'
+                    },
+                    success:function(res) {
+                        if(res == 200) {
+                            $('#register').text('Done')
+                            $('#register').removeClass('btn-primary')
+                            $('#register').addClass('btn-success')
+                        } else {
+                            $('#register').text('not registered')
+                            $('#register').removeClass('btn-primary')
+                            $('#register').addClass('btn-danger')
+                        }
+                    }
+                });
+            });
+
+            let a = document.getElementById('linkPage');
+            a.href = window.location.href;
+        </script>
+
 @endsection

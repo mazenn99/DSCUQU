@@ -43,14 +43,12 @@
                                     <div class="time">
                                         <span>{{\Carbon\Carbon::parse($article->created_at)->diffForHumans()}}</span>
                                     </div>
-
                                     <h3>{{$article->title}}</h3>
                                 </div>
                                 <div class="description-text">
                                     <div class="row">
                                         <div class="col-sm-1">
                                             <div class="description-side-left">
-
                                                 <div class="author-img">
                                                     <img src="images/post/post-author0-1.jpg" alt="" class="img-circle">
                                                     <div class="author-details">
@@ -66,8 +64,6 @@
                                                         <i class="fa fa-comment-o"></i>{{\App\Models\Comments::where('article_id' , $article->id)->count()}}
                                                     </li>
                                                 </ul>
-
-
                                             </div>
                                         </div>
                                         <div class="col-sm-11">
@@ -114,17 +110,18 @@
                                         <h3>Leave a Reply</h3>
                                     </div>
                                     <div class="comment-form">
-                                        <form>
+                                        <form method="POST" action="#">
+                                            @csrf
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" rows="8"
+                                                        <textarea id="dataComment" class="form-control" rows="8"
                                                                   placeholder="Type Your Comments"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="full-width">
-                                                        <input value="Submit" type="submit">
+                                                        <button id="send" class="btn btn-success">Send Comment</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -170,4 +167,31 @@
         </div>
     </div>
     </body>
+@section('script')
+    <script>
+        // add comment
+        $('#send').click(function(e) { // this is event when
+           e.preventDefault();
+           let data = $('#dataComment').val(); // here you get data from textarea
+           $.ajax({
+               url : "{{route('save-comment')}}", // this is link you send through it
+               type : "POST",
+               data : { // this is JSON data aysha send it to backend
+                   '_token' : '{{csrf_token()}}',
+                   'comment' : data ,
+                   'article_id' : '{{$article->id}}'
+               } , success : function (data) {
+                   if(data == 200) {
+                       // here you receive data from backend and you must check the number of status
+                       // you received and show the result to button
+                       console.log('success')
+                   } else {
+                       // here is if the data is failed of you receive any number different than 200
+                       console.log('failed')
+                   }
+               }
+           })
+        });
+    </script>
+@endsection
 @endsection

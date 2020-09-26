@@ -7,6 +7,8 @@ use App\Models\Articles;
 use App\Models\Comments;
 use App\Models\Section;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use phpDocumentor\Reflection\Types\Nullable;
 use PhpParser\Builder;
 
 class ArticlesController extends Controller
@@ -52,6 +54,7 @@ class ArticlesController extends Controller
     public function show($slug)
     {
         $article =  Articles::where('slug' , $slug)->first();
+        $article->increment('visitor');
         return view('users.post' , compact('article'));
     }
 
@@ -87,5 +90,27 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+
+    /*
+     * this function will save new comment
+     * from articles
+     */
+
+    public function saveComment(Request $request) {
+        $id = NULL;
+        if(Auth::user()) {
+            $id = Auth::user()->id;
+        }
+        Comments::create([
+            'users_id'   => $id,
+            'article_id' => $request->input('article_id'),
+            'content'    => $request->input('comment'),
+            'created_at' => now(),
+        ]);
+        return 200;
     }
 }

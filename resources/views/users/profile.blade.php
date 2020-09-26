@@ -1,5 +1,5 @@
 @extends('users.template.master')
-@section('title' , 'profile')
+@section('title' , $speaker->name)
 @section('content')
     <body class="t-profile-01 home_version_03 home_version_02 home_version_04">
     <!-- Preloader -->
@@ -16,10 +16,10 @@
                         <img src="https://via.placeholder.com/261x293" alt="" class="img-responsive">
                         <h3>Contact Info</h3>
                         <ul class="list-unstyled">
-                            <li><a href="{{$speaker->facebook}}"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="{{$speaker->snap}}"><i class="fa fa-snapchat"></i></a></li>
-                            <li><a href="{{$speaker->instagram}}"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="{{$speaker->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{$speaker->facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{$speaker->snap}}" target="_blank"><i class="fa fa-snapchat"></i></a></li>
+                            <li><a href="{{$speaker->instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{$speaker->twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>

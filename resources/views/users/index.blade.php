@@ -102,7 +102,7 @@
         <div class="row">
             @foreach(\App\Models\Courses::limit(5)->get() as $course)
                 <div class="col-sm-12 events-full-box">
-                    <a href="{{route('courses.show' , $course->slug)}}">
+                    <a href="{{route('All-courses.show' , $course->slug)}}">
                     <div class="events-single-box">
                         <div class="row">
                             <div class="col-sm-5">

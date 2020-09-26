@@ -18,7 +18,7 @@
                         <li class="active"><a data-scroll="" href="{{route('index')}}">الصفحة الرئيسية</a>
                         </li>
 
-                        <li><a data-scroll href="{{route('courses.index')}}">الفعاليات</a>
+                        <li><a data-scroll href="{{route('All-courses.index')}}">الفعاليات</a>
                             <!-- dropdwon start -->
 
                             <!-- dropdown end -->
@@ -39,7 +39,7 @@
                             </li>
                         @endauth
                         @guest
-                            <li><a data-scroll href="{{route('login')}}"> تسجيل/دخول </a></li>
+                            <li><a data-scroll href="#mylogin" data-toggle="modal"> signup/login </a></li>
                         @endguest
                     </ul>
                 </div><!-- /.navbar-collapse -->

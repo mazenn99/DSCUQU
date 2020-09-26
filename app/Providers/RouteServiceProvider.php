@@ -16,13 +16,14 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
     protected $userNamespace = 'App\Http\Controllers\users';
-    protected $adminNamespace = 'App\Http\Controllers\admins';
+    protected $adminNamespace = 'App\Http\Controllers\Admin';
     /**
      * The path to the "home" route for your application.
      *
      * @var string
      */
     public const HOME = '/';
+    public const ADMIN = 'administration_platform/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -77,7 +78,7 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapAdminsRoutes()
     {
-        Route::prefix('admins')
+        Route::prefix('administration_platform')
             ->middleware('web')
             ->namespace($this->adminNamespace)
             ->group(base_path('routes/admins.php'));

@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type_courses extends Model
 {
-    //
+    protected $fillable = ['name'];
+    public $timestamps = false;
 }

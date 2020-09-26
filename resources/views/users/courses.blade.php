@@ -14,7 +14,7 @@
     <section class="events-list-03">
         <div class="container">
             @foreach($courses as $course)
-                <a href="{{route('courses.show' , $course->slug)}}">
+                <a href="{{route('All-courses.show' , $course->slug)}}">
                     <div class="row event-body-content">
                         <div class="col-sm-12 events-full-box">
                             <div class="events-single-box">
@@ -73,9 +73,7 @@
                     <div class="col-sm-12 text-center">
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
-
                                 {{$courses->links()}}
-
                                 </li>
                             </ul>
                         </nav>

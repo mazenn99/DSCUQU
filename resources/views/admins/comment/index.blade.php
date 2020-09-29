@@ -8,8 +8,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-5 m-b-35">All Admins</h3>
-                        <a href="{{route('comments.create')}}" class="btn btn-outline-primary mb-2"><i class="fa fa-plus" aria-hidden="true"></i>
-                            Add new Type</a>
+{{--                        <a href="{{route('comments.create')}}" class="btn btn-outline-primary mb-2"><i class="fa fa-plus" aria-hidden="true"></i>--}}
+{{--                            Add new Type</a>--}}
                         @include('admins._partial.success')
                         <div class="table-responsive table--no-card m-b-30">
                             <table class="table table-borderless table-striped table-earning">
@@ -27,13 +27,15 @@
                                 @foreach($comments as $comment)
                                     <tr>
                                        <td>{{$comment->id}}</td>
-                                       <td>{{$comment->users_id ? $comment->users->name : 'Anonymous'}}</td>
-                                       <td>{{$comment->articles->name}}</td>
-                                       <td>{{$comment->content}}</td>
+                                       <td>{!!$comment->users_id ? $comment->users->name : "<span class='text-danger'>Anonymous</span>" !!}</td>
+                                       <td>{{$comment->articles->title}}</td>
+                                       <td>{{substr($comment->content , 0 , 20)}}</td>
                                        <td>{{$comment->created_at}}</td>
                                         <td>
-                                            <form action="">
-
+                                            <form action="{{route('comments.destroy' , $comment->id)}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button onclick="return confirm('Are You Sure')" class="btn btn-outline-danger btn-sm">DELETE</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -41,6 +43,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        {{$comments->links()}}
                     </div>
                 </div>
             </div>

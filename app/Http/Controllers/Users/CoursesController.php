@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CourseConfirmation;
+use App\Mail\CourseConfirmationLink;
+use App\Mail\SendCourseLink;
 use App\Models\Courses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class CoursesController extends Controller
 {
@@ -54,8 +58,9 @@ class CoursesController extends Controller
     }
 
     public function registerAction(Request $request) {
-        $course = Courses::select('id')->find($request->input('CourseID'));
+        $course = Courses::select('id' , 'live_url' , 'title')->find($request->input('CourseID'));
         $course->usersCourses()->sync(Auth::id());
+        Mail::to(Auth::user()->email)->send(new CourseConfirmationLink(Auth::user()->name , $course->title , $course->live_url));
         return 200;
     }
 

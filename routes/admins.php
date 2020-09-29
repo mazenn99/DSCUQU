@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-#Route::resource('')
 Route::group(['middleware' => 'guest:admin' , 'throttle:2,1' ] , function() {
     Route::get('/' , 'AdminLoginController@getLoginForm')->name('admin-login-form');
     Route::post('/' , 'AdminLoginController@checkLogin')->name('admin-login');
 });
 
+
 Route::group(['middleware' => 'auth:admin'] , function() {
+    #################### Attend Courses ###################
+    // create link attend courses
+    Route::post('attend-courses' , 'attendCourseController@attendsCourse')->name('create-link-attend');
+    #################### Attend Courses ###################
     ####################### logout Admin #####################
     Route::post('admin-logout' , 'AdminController@adminLogout')->name('admin-logout');
     ####################### logout Admin #####################
@@ -52,4 +56,8 @@ Route::group(['middleware' => 'auth:admin'] , function() {
     ############## CRUD Comments ##################
     Route::resource('comments' , 'commentController');
     ############## CRUD Comments ##################
+
+    ############## DELETE Specific User-Course ##################
+    Route::post('delete-subscription' , 'CRUDCoursesController@DeleteSpecificUser')->name('delete-course');
+    ############## DELETE Specific User-Course ##################
 });

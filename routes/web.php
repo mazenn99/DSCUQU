@@ -15,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes(['verify' => true]);
+Route::get('attend-courses/{hash}' , 'Admin\attendCourseController@showTablesAttendCourses');
+Route::post('confirm-courses-attend' , 'Admin\attendCourseController@confirmAttend')->name('confirm-attend');
+
 
 

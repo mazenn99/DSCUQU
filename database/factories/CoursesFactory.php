@@ -17,7 +17,6 @@ $factory->define(\App\Models\Courses::class, function (Faker $faker) {
         'title'             => $course[$key],
         'speaker_id'        => \App\Models\Speakers::find(1),
         'details'           => $faker->text('200'),
-        'picture'           => $faker->imageUrl('485' , '285'),
         'slug'              => $faker->slug,
         'sex'               => $faker->numberBetween('0', '2'),
         'levels'            => $faker->numberBetween('1' , '3'),

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Comments;
 use Illuminate\Http\Request;
 
-class commentController extends Controller
+class CertificateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class commentController extends Controller
      */
     public function index()
     {
-        $comments = Comments::orderBy('id' , 'DESC')->paginate(20);
-        return view('admins.comment.index' , compact('comments'));
+        //
     }
 
     /**
@@ -82,7 +80,6 @@ class commentController extends Controller
      */
     public function destroy($id)
     {
-        Comments::find($id)->delete();
-        return redirect()->to(route('comments.index'))->with(['msg' => 'Deleted Comment Successfully']);
+        //
     }
 }

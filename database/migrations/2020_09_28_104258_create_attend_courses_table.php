@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRelationsToCertificateTable extends Migration
+class CreateAttendCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class AddRelationsToCertificateTable extends Migration
      */
     public function up()
     {
-        Schema::table('certificates', function (Blueprint $table) {
+        Schema::create('attend_courses', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('courses_id');
             $table->foreign('courses_id')
                 ->references('id')
                 ->on('courses')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->foreign('users_id')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            $table->string('hash'  , 255);
+            $table->timestamp('created_at');
         });
     }
 
@@ -34,8 +33,6 @@ class AddRelationsToCertificateTable extends Migration
      */
     public function down()
     {
-        Schema::table('courses', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('attend_courses');
     }
 }

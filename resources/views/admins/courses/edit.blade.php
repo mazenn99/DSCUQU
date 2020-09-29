@@ -58,17 +58,6 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="image" class="form-control-label">Image</label>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <input type="file" id="image" name="image" class="form-control-file">
-                                </div>
-                                @error('image')
-                                <small class="text-danger form-text">{{$message}}</small>
-                                @enderror
-                            </div>
-                            <div class="row form-group">
-                                <div class="col col-md-3">
                                     <label class=" form-control-label">Sex</label>
                                 </div>
                                 <div class="col col-md-9">

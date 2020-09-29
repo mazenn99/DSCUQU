@@ -48,10 +48,10 @@
                                                     <div class="parson-img">
                                                         <img src="https://via.placeholder.com/62x63" alt="" class="img-circle">
                                                     </div>
-                                                    <p><a href="">Derek Spafford</a> / <span>Professor</span></p>
+                                                    <p><a href="">{{$speaker->name}}</a></p>
                                                 </div>
                                                 <div class="text-bottom">
-                                                    <h3><a href="#">Mathematics and Statistics</a></h3>
+                                                    <h3><a href="#">{{$speaker->Courses->title}}</a></h3>
                                                     <p>Lorem ipsum dolor sit amet consepctetur adipiscing elit Etiam at ipsum at ligula vestibulum sodales Sed luctus.</p>
                                                 </div>
                                             </div>

@@ -18,7 +18,9 @@
                                 <tr>
                                     <th>ID</th>
                                     {{-- Just For super admin --}}
-                                    <th>Added By</th>
+                                    @if(Session::get('super'))
+                                        <th>Added By</th>
+                                    @endif
                                     {{-- Just For super admin --}}
                                     <th>All Register</th>
                                     <th>Title</th>
@@ -38,7 +40,9 @@
                                 @foreach($courses as $course)
                                     <tr>
                                         <td>{{$course->id}}</td>
-                                        <td>{{$course->admins->name}}</td>
+                                        @if(Session::get('super'))
+                                            <td>{{$course->admins->name}}</td>
+                                        @endif
                                         <td>{{$course->usersCourses()->where('courses_id' , $course->id)->count()}}</td>
                                         <td>
                                             <a href="{{route('subscription-course' , $course->id)}}" target="_blank">

@@ -1,5 +1,5 @@
 @extends('admins.template.master')
-@section('title' , 'Sections')
+@section('title' , 'Speaker')
 @section('content')
     <div class="page-content--bgf7">
         <!-- DATA TABLE-->
@@ -7,10 +7,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="title-5 m-b-35">All Speakers</h3>
-                        <a href="{{route('section.create')}}" class="btn btn-outline-primary mb-2"><i class="fa fa-plus"
+                        <h3 class="title-5 m-b-35">All Admins</h3>
+                        <a href="{{route('speakers.create')}}" class="btn btn-outline-primary mb-2"><i class="fa fa-plus"
                                                                                                       aria-hidden="true"></i>
-                            Add new Speakers</a>
+                            Add new Speaker</a>
                         @include('admins._partial.success')
                         <div class="table-responsive table--no-card m-b-30">
                             <table class="table table-borderless table-striped table-earning">
@@ -22,12 +22,13 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($sections as $section)
+                                @foreach($speakers as $speaker)
                                     <tr>
-                                        <td>{{$section->id}}</td>
-                                        <td>{{$section->name}}</td>
+                                        <td>{{$speaker->id}}</td>
+                                        <td>{{$speaker->name}}</td>
                                         <td>
-                                            <a href="{{route('section.edit' , $section->id)}}"
+                                            <a href="{{route('profile.show' , $speaker->id)}}" class="btn btn-outline-info btn-sm" target="_blank">Preview</a>
+                                            <a href="{{route('speakers.edit' , $speaker->id)}}"
                                                class="btn btn-sm btn-outline-primary">
                                                 Edit
                                             </a>

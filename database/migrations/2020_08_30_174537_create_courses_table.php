@@ -19,7 +19,6 @@ class CreateCoursesTable extends Migration
             $table->unsignedBigInteger('speaker_id');
             $table->string('title' , 50);
             $table->text('details');
-            $table->text('picture');
             $table->string('slug');
             $table->unsignedTinyInteger('sex')->comment('1 => male , 2 => female , 3 => both');
             $table->unsignedTinyInteger('levels')->comment('1 => bigger , 2 => intermediate , 3 => Advanced ');
@@ -31,7 +30,6 @@ class CreateCoursesTable extends Migration
             $table->unsignedBigInteger('collage_id');
             $table->boolean('status')->comment('1 => published , 0 => Unpublished');
             $table->boolean('certificate')->comment('1 => yes , 0 => no');
-            $table->boolean('auto_registration')->comment('0 => waiting to admin approve , 1 => approve automatically');
             $table->string('maximum_attend')->nullable();
             $table->text('live_url')->nullable();
             $table->timestamps();

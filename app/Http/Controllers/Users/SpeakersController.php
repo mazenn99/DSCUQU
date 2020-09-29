@@ -82,6 +82,6 @@ class SpeakersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return abort('403');
     }
 }

@@ -1,5 +1,5 @@
 @extends('admins.template.master')
-@section('title' , 'Add new Title')
+@section('title' , 'edit speaker ' . $speaker->name)
 @section('content')
     <div class="page-content--bgf7">
         <!-- DATA TABLE-->
@@ -10,17 +10,18 @@
                         <strong>Create new </strong> Speakers
                     </div>
                     <div class="card-body card-block">
-                        <form action="{{route('speakers.store')}}" method="POST" enctype="multipart/form-data" class="form-horizontal">
+                        <form action="{{route('speakers.update' , $speaker->id)}}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                             @csrf
+                            @method('PUT')
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="name" class=" form-control-label">Name</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="name" value="{{old('name')}}" name="name" placeholder="Please enter name"
+                                    <input type="text" id="name" value="{{$speaker->name}}" name="name" placeholder="Please enter name"
                                            class="form-control">
                                     @error('name')
-                                        <small class="text-danger form-text">{{$message}}</small>
+                                    <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
@@ -30,9 +31,9 @@
                                 </div>
                                 <div class="col-12 col-md-9">
                                     <textarea name="overview" id="overview" rows="9"
-                                              placeholder="please enter overview" class="form-control">{{old('overview')}}</textarea>
+                                              placeholder="please enter overview" class="form-control">{{$speaker->overview}}</textarea>
                                     @error('overview')
-                                        <small class="text-danger form-text">{{$message}}</small>
+                                    <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
@@ -41,10 +42,10 @@
                                     <label for="twitter" class=" form-control-label">twitter account</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="url" id="twitter" value="{{old('twitter')}}" name="twitter" placeholder="Please enter twitter account"
+                                    <input type="url" id="twitter" value="{{$speaker->twitter}}" name="twitter" placeholder="Please enter twitter account"
                                            class="form-control">
                                     @error('twitter')
-                                        <small class="text-danger form-text">{{$message}}</small>
+                                    <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
                                 </div>
                             </div>
@@ -53,7 +54,7 @@
                                     <label for="snap" class=" form-control-label">snap account</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="url" id="snap" value="{{old('snap')}}" name="snap" placeholder="Please enter snap account"
+                                    <input type="url" id="snap" value="{{$speaker->snap}}" name="snap" placeholder="Please enter snap account"
                                            class="form-control">
                                     @error('snap')
                                     <small class="text-danger form-text">{{$message}}</small>
@@ -65,7 +66,7 @@
                                     <label for="snap" class=" form-control-label">Instagram account</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="url" id="instagram" value="{{old('instagram')}}" name="instagram" placeholder="Please enter instagram account"
+                                    <input type="url" id="instagram" value="{{$speaker->instagram}}" name="instagram" placeholder="Please enter instagram account"
                                            class="form-control">
                                     @error('instagram')
                                     <small class="text-danger form-text">{{$message}}</small>
@@ -77,7 +78,7 @@
                                     <label for="facebook" class=" form-control-label">facebook account</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="url" id="facebook" value="{{old('facebook')}}" name="facebook" placeholder="Please enter facebook account"
+                                    <input type="url" id="facebook" value="{{$speaker->facebook}}" name="facebook" placeholder="Please enter facebook account"
                                            class="form-control">
                                     @error('facebook')
                                     <small class="text-danger form-text">{{$message}}</small>

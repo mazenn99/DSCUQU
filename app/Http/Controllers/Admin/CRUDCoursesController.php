@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCourseRequest;
+use App\Models\attendCourses;
 use App\Models\Courses;
 use App\UserCourses;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use MongoDB\Driver\Session;
@@ -64,7 +66,6 @@ class CRUDCoursesController extends Controller
             'certificate'    => $request->input('certificate') ? 1 : 0 ,
             'maximum_attend' => $request->input('attend'),
             'live_url'       => $request->input('live'),
-            'picture'        => 'www.google.com'
         ]);
         return redirect()->to(route('courses.index'))->with(['msg' => 'Successfully Added Courses']);
     }
@@ -147,11 +148,24 @@ class CRUDCoursesController extends Controller
      */
 
     public function showSubscriptionCourse($id) {
-        $subscription = UserCourses::where('courses_id' , $id)->get();
-        #$course = Courses::find($id);
-        #$subscription = $course->usersCourses()->get();
-        #return $course->usersCourses()->get();
-        return view('admins.courses.subscription' , compact('subscription'));
+        $subscription = Courses::find($id)->usersCourses()->get();
+        $attendsLink = attendCourses::where('courses_id' , $id)->first();
+        if(!empty($attendsLink)) {
+            return view('admins.courses.subscription' , compact('subscription' , 'id' , 'attendsLink'));
+        } else {
+            return view('admins.courses.subscription' , compact('subscription' , 'id'));
+        }
+    }
+
+    /*
+     * delete registered user in specific course
+     */
+
+    public function DeleteSpecificUser(Request $request) {
+        $del = new Courses();
+        $user = \App\User::find($request->input('user'));
+        $user->usersCourses()->detach($request->input('course'));
+        return redirect()->back()->with(['msg' => 'Successfully Deleted User']);
     }
 
 }

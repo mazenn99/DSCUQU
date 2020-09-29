@@ -257,5 +257,4 @@
             let a = document.getElementById('linkPage');
             a.href = window.location.href;
         </script>
-
 @endsection

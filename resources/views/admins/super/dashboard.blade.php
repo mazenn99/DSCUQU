@@ -370,25 +370,43 @@
                             </a>
                         </div>
                     </div>
-                    @if(Session::get('super'))
-                        <div class="col-md-6 col-lg-3">
-                            <div class="statistic__item statistic__item--blue">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="statistic__item statistic__item--blue">
+                            <a href="{{route('speakers.index')}}">
                                 <h2 class="number">{{\App\Models\Speakers::count()}}</h2>
                                 <span class="desc">All Speakers</span>
                                 <div class="icon">
                                     <i class="zmdi zmdi-calendar-note"></i>
                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                    @if(Session::get('super'))
+                        <div class="col-md-6 col-lg-3">
+                            <div class="statistic__item statistic__item--red">
+                                <a href="{{route('comments.index')}}">
+                                    <h2 class="number">{{\App\Models\Comments::count()}}</h2>
+                                    <span class="desc">All Comments</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-money"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     @endif
                     @if(Session::get('super'))
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--red">
-                                <h2 class="number">{{\App\Models\Comments::count()}}</h2>
-                                <span class="desc">All Comments</span>
-                                <div class="icon">
-                                    <i class="zmdi zmdi-money"></i>
-                                </div>
+                                <a href="#">
+                                    <h2 class="number">{{\App\User::count()}}</h2>
+                                    <span class="desc">
+                                        male : <span>{{\App\User::where('sex' , 0)->count()}}</span> <br>
+                                        female : <span>{{\App\User::where('sex' , 1)->count()}}</span>
+                                    </span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-money"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     @endif
@@ -397,44 +415,44 @@
         </section>
         <!-- END STATISTIC-->
 
-        @if(Session::get('super'))
-            <!-- DATA TABLE-->
-                <section class="p-t-20">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3 class="title-5 m-b-35">Latest Courses</h3>
-                                <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
+    @if(Session::get('super'))
+        <!-- DATA TABLE-->
+            <section class="p-t-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="title-5 m-b-35">Latest Courses</h3>
+                            <div class="table-responsive table--no-card m-b-30">
+                                <table class="table table-borderless table-striped table-earning">
+                                    <thead>
+                                    <tr>
+                                        <th>Added By</th>
+                                        <th>Speakers</th>
+                                        <th>Title</th>
+                                        <th class="text-right">Sex | Levels</th>
+                                        <th class="text-right">Date | Start At</th>
+                                        <th class="text-right">Status | Certificate</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach(\App\Models\Courses::orderBy('id' , 'DESC')->limit(5)->get() as $courses)
                                         <tr>
-                                            <th>Added By</th>
-                                            <th>Speakers</th>
-                                            <th>Title</th>
-                                            <th class="text-right">Sex | Levels</th>
-                                            <th class="text-right">Date | Start At</th>
-                                            <th class="text-right">Status | Certificate</th>
+                                            <td>{{$courses->admins->name}}</td>
+                                            <td>{{$courses->speakers->name}}</td>
+                                            <td>{{$courses->title}}</td>
+                                            <td>{!! $courses->getSex() !!} | {!! $courses->getLevels() !!}</td>
+                                            <td>{!! $courses->courseDate() !!}</td>
+                                            <td>{!! $courses->getStatus() !!} | {!! $courses->getCertificate() !!}</td>
                                         </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach(\App\Models\Courses::orderBy('id' , 'DESC')->limit(5)->get() as $courses)
-                                            <tr>
-                                                <td>{{$courses->admins->name}}</td>
-                                                <td>{{$courses->speakers->name}}</td>
-                                                <td>{{$courses->title}}</td>
-                                                <td>{!! $courses->getSex() !!} | {!! $courses->getLevels() !!}</td>
-                                                <td>{!! $courses->courseDate() !!}</td>
-                                                <td>{!! $courses->getStatus() !!} | {!! $courses->getCertificate() !!}</td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- END DATA TABLE-->
+                </div>
+            </section>
+            <!-- END DATA TABLE-->
         @endif
     </div>
 @endsection

@@ -17,7 +17,6 @@ class CreateCertificatesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('courses_id');
             $table->unsignedBigInteger('users_id');
-            $table->unsignedBigInteger('type_course_id');
             $table->date('created_at');
         });
     }

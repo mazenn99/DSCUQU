@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Certificate;
 use Illuminate\Http\Request;
 
 class CertificateController extends Controller
@@ -14,7 +15,8 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        //
+        $certificates = Certificate::orderBy('id' , 'DESC')->paginate(20);
+        return view('admins.certificate.index' , compact('certificates'));
     }
 
     /**
@@ -46,7 +48,7 @@ class CertificateController extends Controller
      */
     public function show($id)
     {
-        //
+        return abort('403');
     }
 
     /**
@@ -76,10 +78,11 @@ class CertificateController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        Certificate::find($id)->delete();
+        return redirect()->back()->with(['msg' => 'Successfully Deleted Certificated']);
     }
 }

@@ -34,14 +34,19 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <form action="{{route('confirm-attend')}}" method="POST">
-                                                @csrf
-                                                <input type="hidden" value="{{$people->pivot->courses_id}}" name="courseID">
-                                                <input type="hidden" value="{{$people->pivot->users_id}}" name="userID">
-                                                <button class="btn btn-sm btn-outline-info">
-                                                    اصدار الشهادة
-                                                </button>
-                                            </form>
+                                            @if(!(\App\Models\Certificate::where('users_id' , $people->id)->first()))
+                                                <form action="{{route('confirm-attend')}}" method="POST"
+                                                      class="d-inline-block">
+                                                    @csrf
+                                                    <input type="hidden" value="{{$people->pivot->courses_id}}"
+                                                           name="courseID">
+                                                    <input type="hidden" value="{{$people->pivot->users_id}}"
+                                                           name="userID">
+                                                    <button class="btn btn-sm btn-outline-info">
+                                                        اصدار الشهادة
+                                                    </button>
+                                                </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

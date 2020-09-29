@@ -60,4 +60,8 @@ Route::group(['middleware' => 'auth:admin'] , function() {
     ############## DELETE Specific User-Course ##################
     Route::post('delete-subscription' , 'CRUDCoursesController@DeleteSpecificUser')->name('delete-course');
     ############## DELETE Specific User-Course ##################
+
+    ############## Certificate Controller ##################
+    Route::resource('certificate' , 'CertificateController');
+    ############## Certificate Controller ##################
 });

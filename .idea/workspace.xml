@@ -6,31 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fee78a14-52ed-47f8-bdc3-0c77a2fbcf21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/commentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/commentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/speakerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/speakerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/SpeakersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/SpeakersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CertificateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CertificateController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Certificate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Speakers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Speakers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CoursesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CoursesFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174352_create_certificates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174352_create_certificates_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_30_174537_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_30_174537_create_courses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_22_150956_add_created_at_status_to_users_courses_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/relations/2020_08_30_215434_add_relations_to_certificate_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/relations/2020_08_30_215434_add_relations_to_certificate_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/comment/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/comment/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/attend/attend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/attend/attend.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/speaker/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/speaker/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/speaker/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/speaker/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/template/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +231,7 @@
       <workItem from="1601281877463" duration="242000" />
       <workItem from="1601282405573" duration="21866000" />
       <workItem from="1601320890091" duration="5942000" />
-      <workItem from="1601365113051" duration="5286000" />
+      <workItem from="1601365113051" duration="12017000" />
     </task>
     <servers />
   </component>
@@ -300,11 +281,11 @@
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
-    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601304940813">
+    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601379934835">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599119248091" />
-    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601304940813" />
+    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601379934835" />
     <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600695752803">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -317,11 +298,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="448" y="242" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601051747519" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601287222127">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601380618832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120176489" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601287222127" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601380618832" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

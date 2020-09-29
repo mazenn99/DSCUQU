@@ -349,11 +349,13 @@
                     @if(Session::get('super'))
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--green">
-                                <h2 class="number">{{\App\Models\Certificate::count()}}</h2>
-                                <span class="desc">All Certificate</span>
-                                <div class="icon">
-                                    <i class="zmdi zmdi-account-o"></i>
-                                </div>
+                                <a href="{{route('certificate.index')}}">
+                                    <h2 class="number">{{\App\Models\Certificate::count()}}</h2>
+                                    <span class="desc">All Certificate</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-account-o"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     @endif

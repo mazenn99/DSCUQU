@@ -15,7 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-    protected $userNamespace = 'App\Http\Controllers\users';
+    protected $userNamespace = 'App\Http\Controllers\Users';
     protected $adminNamespace = 'App\Http\Controllers\Admin';
     /**
      * The path to the "home" route for your application.

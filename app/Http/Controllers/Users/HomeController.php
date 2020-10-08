@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateUserInformation;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -81,5 +85,30 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function dashboard() {
+        return view('users.dashboard');
+    }
+
+    public function editPage() {
+        return view('users.edit');
+    }
+
+    public function updateUserInformation(UpdateUserInformation $request) {
+        $user = User::find(Auth::id());
+        $sex;
+        switch ($request->input('sex')) {
+            case 0 : $sex = 0;
+            break;
+            case 1 : $sex = 1;
+        }
+        $user->update([
+            'name'     => $request->input('username'),
+            'email'    => $request->input('email'),
+            'password' => $request->input('password') ? Hash::make($request->input('password')) : $user->password,
+            'sex'      => $sex,
+        ]);
+        return redirect()->back();
     }
 }

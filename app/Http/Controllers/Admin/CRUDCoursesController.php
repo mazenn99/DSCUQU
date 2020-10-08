@@ -110,24 +110,46 @@ class CRUDCoursesController extends Controller
      */
     public function update(CreateCourseRequest $request, Courses $course)
     {
-        Courses::update([
-            'speaker_id'     => $request->input('speaker') ,
+        $sex = 3;
+        $levels = 1;
+        switch($request->input('sex')) {
+            case 1:
+                $sex = 1;
+                break;
+            case 2:
+                $sex = 2;
+                break;
+            case 3:
+                $sex = 3;
+        }
+        switch($request->input('levels')){
+            case 1 :
+                $levels=1;
+                break;
+            case 2 :
+                $levels=2;
+                break;
+            case 3 :
+                $levels=3;
+                break;
+        }
+        $course->update([
             'details'        => $request->input('details') ,
             'title'          => $request->input('name') ,
-            'sex'            => $request->input('sex') ,
-            'levels'         => $request->input('levels'),
+            'sex'            => $sex,
+            'levels'         => $levels,
             'course_date'    => $request->input('date') ,
             'start_time'     => $request->input('start_time') ,
             'end_time'       => $request->input('end_time') ,
-            'online'         => $request->input('type') ,
+            'online'         => $request->input('type') ? 1 : 0 ,
             'type_courses_id'=> $request->input('type_courses') ,
             'collage_id'     => $request->input('collage') ,
             'status'         => $request->input('published') ? 1 : 0 ,
             'certificate'    => $request->input('certificate') ? 1 : 0 ,
             'maximum_attend' => $request->input('attend'),
             'live_url'       => $request->input('live'),
-            'picture'        => $request->file('image') ? $this->storeImage($request->file('image') , 'admin/images/courses') : $course->picture,
         ]);
+        return redirect()->to(route('courses.index'))->with(['msg' => 'Successfully Updated Courses']);
     }
 
     /**

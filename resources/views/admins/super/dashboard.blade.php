@@ -298,7 +298,7 @@
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--green">
                                 <a href="{{route('admins.index')}}">
-                                    <h2 class="number">{{\App\User::count()}}</h2>
+                                    <h2 class="number">{{\App\Models\Admins::where('is_super' , 0)->count()}}</h2>
                                     <span class="desc">All Admins</span>
                                     <div class="icon">
                                         <i class="zmdi zmdi-account-o"></i>

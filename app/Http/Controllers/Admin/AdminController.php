@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\updateAdminInfo;
+use App\Models\Admins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
@@ -98,5 +101,19 @@ class AdminController extends Controller
     public function adminLogout() {
         Auth::logout();
         return redirect()->to(route('admin-login-form'))->with(['msg' => 'Successfully Logout']);
+    }
+
+    public function editAccountForm() {
+        return view('admins.edit');
+    }
+
+    public function updateAccountAdmin(updateAdminInfo $request) {
+        $admin = Admins::find(Auth::id());
+        $admin->update([
+            'name'     => $request->input('name'),
+            'email'    => $request->input('email'),
+            'password' => $request->input('password') ? Hash::make($request->input('password')) : $admin->password,
+        ]);
+        return redirect()->back()->with(['msg' => 'Successfully Updated ' . $admin->name . ' Account']);
     }
 }

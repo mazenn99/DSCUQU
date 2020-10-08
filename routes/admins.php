@@ -64,4 +64,10 @@ Route::group(['middleware' => 'auth:admin'] , function() {
     ############## Certificate Controller ##################
     Route::resource('certificate' , 'CertificateController');
     ############## Certificate Controller ##################
+
+    ############## EDIT ADMIN ACCOUNT ##################
+    Route::get('edit-info' , 'AdminController@editAccountForm')->name('edit-admin-account');
+    Route::post('update-info' , 'AdminController@updateAccountAdmin')->name('update-admin-account');
+    ############## EDIT ADMIN ACCOUNT ##################
+
 });

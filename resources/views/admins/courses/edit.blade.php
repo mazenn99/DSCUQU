@@ -64,20 +64,20 @@
                                     <div class="form-check">
                                         <div class="radio">
                                             <label for="male" class="form-check-label ">
-                                                <input type="radio" id="male" name="sex" @if($course->sex == 1) checked @endif
-                                                       class="form-check-input">Male
+                                                <input type="radio" id="male" value="1" name="sex" @if($course->sex == 1) checked @endif
+                                                class="form-check-input">Male
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="female" class="form-check-label ">
-                                                <input type="radio" id="female" name="sex" @if($course->sex == 2) checked @endif
-                                                       class="form-check-input">Female
+                                                <input type="radio" id="female" name="sex" value="2" @if($course->sex == 2) checked @endif
+                                                class="form-check-input">Female
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="both" class="form-check-label ">
-                                                <input type="radio" id="both" name="sex" @if($course->sex == 3) checked @endif
-                                                       class="form-check-input">Both
+                                                <input type="radio" id="both" name="sex" value="3" @if($course->sex == 3) checked @endif
+                                                class="form-check-input">Both
                                             </label>
                                         </div>
                                         @error('sex')
@@ -95,20 +95,20 @@
                                     <div class="form-check">
                                         <div class="radio">
                                             <label for="Beginner" class="form-check-label ">
-                                                <input type="radio" id="Beginner" name="levels" @if($course->levels == 1) checked @endif
-                                                       class="form-check-input">Beginner
+                                                <input type="radio" id="Beginner" name="levels"  value="1" @if($course->levels == 1) checked @endif
+                                                class="form-check-input">Beginner
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="intermediate" class="form-check-label ">
-                                                <input type="radio" id="intermediate" name="levels" @if($course->levels == 2) checked @endif
-                                                       class="form-check-input">Intermediate
+                                                <input type="radio" id="intermediate" name="levels" value="2" @if($course->levels == 2) checked @endif
+                                                class="form-check-input">Intermediate
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="advanced" class="form-check-label ">
-                                                <input type="radio" id="advanced" name="levels" @if($course->levels == 3) checked @endif
-                                                       class="form-check-input">Advanced
+                                                <input type="radio" id="advanced" name="levels" value="3" @if($course->levels == 3) checked @endif
+                                                class="form-check-input">Advanced
                                             </label>
                                         </div>
                                         @error('levels')
@@ -155,13 +155,13 @@
                                         <div class="radio">
                                             <label for="online" class="form-check-label ">
                                                 <input type="radio" id="online" name="type" @if($course->online == 1) checked @endif
-                                                       class="form-check-input">Online
+                                                class="form-check-input">Online
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="offline" class="form-check-label ">
                                                 <input type="radio" id="offline" name="type" @if($course->online == 0) checked @endif
-                                                       class="form-check-input">Offline
+                                                class="form-check-input">Offline
                                             </label>
                                         </div>
                                         @error('type')
@@ -269,4 +269,9 @@
             </div>
         </section>
     </div>
+@endsection
+@section('script')
+    <script>
+
+    </script>
 @endsection

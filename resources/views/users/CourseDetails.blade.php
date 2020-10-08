@@ -99,14 +99,10 @@
                             <div class="clock-countdown">
                                 <div class="site-config"></div>
                                 <div class="coundown-timer">
-                                    <div class="single-counter"><span class="days">21</span><span
-                                            class="normal">Days</span></div>
-                                    <div class="single-counter single-chag-color"><span class="hours">12</span><span
-                                            class="normal">Hours</span></div>
-                                    <div class="single-counter"><span class="minutes">25</span><span class="normal">Minutes</span>
-                                    </div>
-                                    <div class="single-counter single-chag-color"><span class="seconds">48</span><span
-                                            class="normal">Seconds</span></div>
+                                    <div class="single-counter"><span class="days" id="timerDays">21</span><span class="normal">Days</span></div>
+                                    <div class="single-counter single-chag-color"><span class="hours" id="timerHours">12</span><span class="normal">Hours</span></div>
+                                    <div class="single-counter"><span class="minutes" id="timerMinutes">25</span><span class="normal">Minutes</span></div>
+                                    <div class="single-counter single-chag-color"><span class="seconds" id="timerSeconds">48</span><span class="normal">Seconds</span></div>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +166,7 @@
                                                                                         class="btn btn-primary"
                                                                                         value="{{$course->id}}"
                                                                                 >Register
+                                                                                    <i id="spinner" class="fa fa-spinner fa-spin" style="display: none"></i>
                                                                                 </button>
                                                                             </div>
                                                                         </div>
@@ -231,8 +228,54 @@
     @endsection
     @section('script')
         <script>
+            var timer;
+            function settimer()
+            {
+                currentTime = new Date();
+                clearInterval(timer);
+                var timer_month=05;
+                var timer_day=25;
+                var timer_year=currentTime.getFullYear()+1;
+                var timer_hour=10;
+                if(timer_hour=="")timer_hour=0;
+                var timer_min=30;
+                if(timer_min=="")timer_min=0;
+
+                var timer_date=timer_month+"/"+timer_day+"/"+timer_year+" "+timer_hour+":"+timer_min;
+                var end = new Date(timer_date); // Arrange values in Date Time Format
+                var now = new Date(); // Get Current date time
+                var second = 1000; // Total Millisecond In One Sec
+                var minute = second * 60; // Total Sec In One Min
+                var hour = minute * 60; // Total Min In One Hour
+                var day = hour * 24; // Total Hour In One Day
+
+                function showtimer() {
+                    var now = new Date();
+                    var remain = end - now; // Get The Difference Between Current and entered date time
+                    if(remain < 0)
+                    {
+                        clearInterval(timer);
+                        //document.getElementById("timer_value").innerHTML = 'Reached!';
+                        return;
+                    }
+                    var days = Math.floor(remain / day); // Get Remaining Days
+                    var hours = Math.floor((remain % day) / hour); // Get Remaining Hours
+                    var minutes = Math.floor((remain % hour) / minute); // Get Remaining Min
+                    var seconds = Math.floor((remain % minute) / second); // Get Remaining Sec
+                    document.getElementById("timerDays").innerHTML = days;
+                    document.getElementById("timerHours").innerHTML = hours;
+                    document.getElementById("timerMinutes").innerHTML = minutes;
+                    document.getElementById("timerSeconds").innerHTML = seconds;
+                }
+                timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
+            }
+            settimer();
+        </script>
+        <script>
             $('#register').on('click' , function() {
                 let btnVal = $(this).val();
+                $('#spinner').css('display,inline-block');
+                $('#register').text('Loading..');
                 $.ajax({
                     url : '{{route('register-course')}}',
                     method : 'POST',
@@ -242,19 +285,18 @@
                     },
                     success:function(res) {
                         if(res == 200) {
-                            $('#register').text('Done')
-                            $('#register').removeClass('btn-primary')
-                            $('#register').addClass('btn-success')
+                            $('#spinner').hide();
+                            $('#register').text('Done');
+                            $('#register').removeClass('btn-primary');
+                            $('#register').addClass('btn-success');
                         } else {
-                            $('#register').text('not registered')
-                            $('#register').removeClass('btn-primary')
-                            $('#register').addClass('btn-danger')
+                            $('#spinner').hide();
+                            $('#register').text('not registered');
+                            $('#register').removeClass('btn-primary');
+                            $('#register').addClass('btn-danger');
                         }
                     }
                 });
             });
-
-            let a = document.getElementById('linkPage');
-            a.href = window.location.href;
-        </script>
+            </script>
 @endsection

@@ -37,7 +37,7 @@
                         <div class="col-sm-12">
                             <h3 class="courses-title">Courses By {{$speaker->name}}</h3>
                             <div class="row item-margin">
-                                @foreach(\App\Models\Courses::where('speaker_id' , $speaker->id)->limit(5)->get() as $course)
+                                @foreach(\App\Models\Courses::where('speaker_id' , $speaker->id)->get() as $course)
                                     <div class="col-sm-6 instractor-single pb-2">
                                         <div class="instractor-courses-single">
                                             <div class="img-box">
@@ -51,14 +51,15 @@
                                                     <p><a href="">{{$speaker->name}}</a></p>
                                                 </div>
                                                 <div class="text-bottom">
-                                                    <h3><a href="#">{{$speaker->Courses->title}}</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet consepctetur adipiscing elit Etiam at ipsum at ligula vestibulum sodales Sed luctus.</p>
+                                                    <h3><a href="#">{{$course->title}}</a></h3>
+                                                    <p>
+                                                        {{$course->details}}
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="price">
                                                 <ul class="list-unstyled">
-                                                    <li><i class="fa fa-user"></i>50 Students</li>
-                                                    <li>$50.00</li>
+                                                    <li><i class="fa fa-user"></i>{{$course->usersCourses()->count()}}</li>
                                                 </ul>
                                             </div>
                                         </div>

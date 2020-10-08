@@ -31,15 +31,15 @@
                             <li><a data-scroll href="#">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
                                 <!-- dropdwon start -->
                                 <ul class="dropdown list-unstyled">
-                                    <li><a href="#">Edit Account</a></li>
-                                    <li><a href="#">Courses History</a></li>
+                                    <li><a href="{{route('edit-page')}}">Edit Account</a></li>
+                                    <li><a href="{{route('users-dashboard')}}">Courses History</a></li>
                                     <li><a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
                                 </ul>
                                 <!-- dropdown end -->
                             </li>
                         @endauth
                         @guest
-                            <li><a data-scroll href="#mylogin" data-toggle="modal"> signup/login </a></li>
+                            <li><a href="{{route('login')}}"> signup/login </a></li>
                         @endguest
                     </ul>
                 </div><!-- /.navbar-collapse -->

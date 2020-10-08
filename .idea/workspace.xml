@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee78a14-52ed-47f8-bdc3-0c77a2fbcf21" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CertificateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CertificateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Certificate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/attend/attend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/attend/attend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/template/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/template/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +39,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/brick/math" />
@@ -123,12 +134,17 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gpQiTRAea0E8HLWPm6yOz8QKML" />
@@ -139,7 +155,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fnbtime/LaravelApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/site/images/certificate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -156,11 +172,11 @@
       <recent name="C:\laragon\www\DSC-UQU-SITE\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\certificate" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\super" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images\icon" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\comment" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\lang\ar" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -231,7 +247,15 @@
       <workItem from="1601281877463" duration="242000" />
       <workItem from="1601282405573" duration="21866000" />
       <workItem from="1601320890091" duration="5942000" />
-      <workItem from="1601365113051" duration="12017000" />
+      <workItem from="1601365113051" duration="15183000" />
+      <workItem from="1601457705624" duration="3092000" />
+      <workItem from="1601462050542" duration="5971000" />
+      <workItem from="1601532792725" duration="9275000" />
+      <workItem from="1601558098454" duration="5593000" />
+      <workItem from="1601615803622" duration="2197000" />
+      <workItem from="1601792266566" duration="1421000" />
+      <workItem from="1601929875386" duration="1157000" />
+      <workItem from="1602141691121" duration="588000" />
     </task>
     <servers />
   </component>
@@ -281,11 +305,11 @@
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
-    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601379934835">
+    <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601560305415">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2704" y="426" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599119248091" />
-    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601379934835" />
+    <state x="784" y="426" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601560305415" />
     <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600695752803">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -298,11 +322,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="448" y="242" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601051747519" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601380618832">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601559698656">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120176489" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601380618832" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601559698656" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -310,6 +334,10 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Models/Articles.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/users/courses.blade.php</url>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -37,7 +37,7 @@
                                         @endforeach
                                     </select>
                                     <small class="form-text text-muted">if Speakers not here please added from there <a
-                                            href="#" target="_blank">Add new speaker</a></small>
+                                            href="{{route('speakers.create')}}" target="_blank">Add new speaker</a></small>
                                     @error('speaker')
                                     <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
@@ -180,7 +180,7 @@
                                         @endforeach
                                     </select>
                                     <small class="form-text text-muted">If you don't find type courses please added from there<a
-                                            href="#" target="_blank">Add new Type Courses</a></small>
+                                            href="{{route('type-courses.create')}}" target="_blank">Add new Type Courses</a></small>
                                     @error('type_courses')
                                     <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
@@ -196,8 +196,6 @@
                                             <option value="{{$collage->id}}">{{$collage->name}}</option>
                                         @endforeach
                                     </select>
-                                    <small class="form-text text-muted">If you don't find collage please added from there<a
-                                            href="#" target="_blank">Add new collage</a></small>
                                     @error('collage')
                                     <small class="text-danger form-text">{{$message}}</small>
                                     @enderror

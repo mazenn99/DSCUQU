@@ -1,59 +1,60 @@
 <!-- Footer Area section -->
 <footer>
-    <div  class="container">
-        <div class="row">
-            <div  class=" col-sm-12 footer-content-box">
-                <div class="col-sm-3" >
-
-                    <p>We are Educatios, creat your passion and inspiration. And hope success will come for your dream. Please send email and get latest news.</p>
-                    <ul class="list-unstyled footer-menu text-center">
-                        <li><span><i class="fa fa-phone footer-icon"></i></span>0123-456-789</li>
-                        <li><span><i class="fa fa-envelope footer-icon"></i></span>hello@education.com</li>
-                        <li><span><i class="fa fa-map-marker footer-icon"></i></span>01 Central Park, NYC</li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-3" >
-                    <h3 align="center" >Get in touch</h3>
-                    <p>Enter your email and we'll send you more information.</p>
-
-                    <form action="#">
-                        <div class="form-group" >
-                            <input placeholder="Your Email" type="email" required="" >
-                            <div class="submit-btn">
-                                <div class="submit-btn">
-                                    <button type="submit" class="text-center">Subscribe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-inner">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 footer-no-padding">
-                        <p>&copy; Copyright 2019 EcologyTheme | All rights reserved</p>
-                    </div>
-                    <div class="col-md-6 col-sm-12 footer-no-padding">
-                        <ul class="list-unstyled footer-menu text-right">
-                            <li>Follow us:</li>
-
-                            <li><a href=""><i class="fa fa-twitter twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-youtube youtube"></i></a></li>
-                            <li><a href=""><i class="fa fa-google google"></i></a></li>
-
+	<div  class="container " id="contact" dir="rtl" >
+		<div class="row">
+			<div  class=" col-sm-12 footer-content-box ">
+				<div class="col-sm-6"  style="margin-top:4%;" >
+				
+                <p > نادي الطلبة المطورين بجامعة أم القرى بدعم رسمي من قوقل نهدف إلى نشر المعرفة التقنية في المجتمع الجامعي </p>
+                    
+                    <div class="footer-icon">
+                        <ul class="list-unstyled" style="display:inline-block">
+                            <li class="footer-icon-li"><span><a id="icon" target="_blank" href="https://twitter.com/DSCUQU"><i class="fa fa-twitter twitter fa-2x"></i></a></span></li>
+                            <li class="footer-icon-li"><span><a id="icon" target="_blank" href="https://www.youtube.com/channel/UCihwwL2n2OZ10oxvajU9duw"><i class="fa fa-youtube youtube twitter fa-2x"></i></a></span></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- ./ End footer-bottom -->
+
+				</div>	
+                        
+
+				<div class="col-sm-3" dir="rtl" style="margin-left: 10%;">
+					<h3 align="center" >تواصل معنا</h3>
+				
+                    
+
+					<form action="#">
+						<fieldset class="form-group">
+                            <input type="email" class="form-control rounded-0" id="exampleInputEmail1"  placeholder="الإسم"> </fieldset>
+                       <div class="form-group">
+                     <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"  placeholder="الرسالة"></textarea>
+                       </div>
+                          <div class="form-group">
+							<div class="submit-btn">
+								<div class="submit-btn">
+									<button type="submit" class="text-center">إرسال</button>
+								</div>
+							</div>
+                        </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-bottom-inner">
+				<div class="row">
+					
+					<div class="col-md-12 col-sm-12 footer-no-padding" style="">
+						<p>&copy; Copyright 2019 EcologyTheme </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- ./ End footer-bottom -->		
 </footer><!-- ./ End Footer Area section -->
+
 
 <!-- ============================
 JavaScript Files

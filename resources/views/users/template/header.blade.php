@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="EduRead - Education HTML5 Template">
@@ -27,6 +28,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('site')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('site')}}/css/responsive.css">
+<style>
+        
+        .footer-icon-li {
+            display:inline-block;
+            margin:0 20px;
+        }
+    
+    </style> 
+    
     @yield('style')
 </head>
 

@@ -4,21 +4,18 @@
 @section('photo')
     <div class="container">
         <div class="row">
-            <div class="col-md-10 col-sm-offset-1">
-                <div class="intro-text  wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-
-                    <h1>Education A Global Community</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscingl elit sed diam nonumm nibhy
-                        euismod<br> tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                    <a href="#." class="el-btn-regular slider-btn-left">Get Started now</a> <a href="#."
-                                                                                               class="el-btn-regular">View
-                        Courses</a>
+            		<div class="col-md-10 col-sm-offset-1">
+					<div class="intro-text  wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
+						<h1>نادي الطلبة المطورين</h1>
+					<p>  حيثُ نور المعرفة و سِهام التطوير و سُبل التعليم نضعها بين أيدي الشغوفين <br>  نصنع به مستقبلاً زاهراً لكل الحالمين <br> </p>
+                        <p>يسعدنا انضمامك لتكون جزءّا من القصة</p>
+						<a href="https://docs.google.com/forms/d/1t6Rh2BuBIZMSxDCMvvdrZEo-4G55OWE2KREdya4jIzA/edit" class="el-btn-regular slider-btn-left" targe="_blank">طلب الإنضمام</a> 
+				
+				</div>
+                                                                                
                 </div>
             </div>
-            <div class="col-sm-12 text-center">
-                <div class="mouse-icon-box">
-                    <a href="#" class="mouse-icon"></a>
-                </div>
+          
             </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
@@ -34,9 +31,7 @@
         <div class="row">
             <div class="col-sm-12 section-header-box">
                 <div class="section-header">
-                    <h2 class="text-center">Welcome to EduRead</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
-                        maecenas.</p>
+                 <h2 style=" text-align: center;">مرحبا بكم في نادي الطلبة المطورين</h2>
                 </div><!-- ends: .section-header -->
             </div>
         </div>
@@ -45,13 +40,13 @@
             <div class="col-sm-4 wel-ful-box-2">
                 <div class="wel-text-box">
                     <div class="wel-icon">
-                        <img src="{{asset('site')}}/images/index-02/welcome-01.png" alt="">
+                        <img src="{{asset('site')}}/images/index-02/reading.png" alt="">
                     </div>
                     <div class="wel-text">
-                        <h3>Learn Anywhere Online</h3>
-                        <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget
-                            Etiam maecenas.</p>
-                        <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+                      
+                        <h3>نتعلّم</h3>
+						<p style="font-size: 18px;"> 
+						نفتح لك آفاقًا واسعة وبوابة للعبور الزمني لتصوّر شكل العالم التقني الحديث </p> 
                     </div>
                 </div>
             </div>
@@ -62,10 +57,8 @@
                         <img src="{{asset('site')}}/images/index-02/welcome-02.png" alt="">
                     </div>
                     <div class="wel-text">
-                        <h3>Graduation Certificate</h3>
-                        <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget
-                            Etiam maecenas.</p>
-                        <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+                        <h3>نطور</h3>
+						<p style="font-size: 18px;">نساعد مهاراتك على النمو ونفسح المجال لها للظهور والحظي بتجارب مختلفة معًا </p>
                     </div>
                 </div>
             </div>
@@ -73,13 +66,11 @@
             <div class="col-sm-4  wel-ful-box-2">
                 <div class="wel-text-box">
                     <div class="wel-icon">
-                        <img src="{{asset('site')}}/images/index-02/welcome-03.png" alt="">
+                        <img src="{{asset('site')}}/images/index-02/lightbulb.png" alt="">
                     </div>
                     <div class="wel-text">
-                        <h3>Professional Teachers</h3>
-                        <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget
-                            Etiam maecenas.</p>
-                        <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+                       <h3>نوجه</h3>
+						<p style="font-size: 18px;">نبيّن معالم خطواتك المستقبلية التي توجّهك نحو سوق العمل الفسيح </p>
                     </div>
                 </div>
             </div>
@@ -94,7 +85,7 @@
         <div class="row">
             <div class="col-sm-12 section-header-box">
                 <div class="section-header">
-                    <h2>Upcoming Events</h2>
+                    <h2>الفعاليات القادمة </h2>
                 </div><!-- ends: .section-header -->
             </div>
         </div>
@@ -166,37 +157,12 @@
             <div class="col-sm-12 video-play-btn">
                 <a href="http://www.youtube.com/watch?v=DcN_hcHXR_0" class="video-iframe"><i class="fa fa-play"></i></a>
             </div>
-
-            <div class="video-content">
-                <h2>Take a Tour EduRead Campus</h2>
-            </div><!-- ends: .section-header -->
         </div>
     </div>
 </section>
 <!-- ./ End Video Area section -->
 <!-- Instraction Area section -->
-<section class="trausted-stu-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <div class="trausted-content">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-9">
-                            <h3 class="section-h-medium">TRUSTED BY OVER 10000+ STUDENTS</h3>
-                            <p>Join our community of students around the world helping you succeed.</p>
-                        </div>
 
-                        <div class="col-sm-12 col-md-3">
-                            <div class="trausted-stu-btn">
-                                <a href="#" class="">get strated</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- ./ End Instruction Area section -->
 </body>
 @endsection

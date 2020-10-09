@@ -24,9 +24,9 @@ class UpdateUserInformation extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'email' => 'required',
-            'sex' => 'required',
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'sex' => 'required|numeric|between:0,1'
         ];
     }
 }

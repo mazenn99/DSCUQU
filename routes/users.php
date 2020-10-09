@@ -20,5 +20,5 @@ Route::resource('articles' , 'ArticlesController');
 Route::resource('profile' , 'SpeakersController');
 Route::post('save-comment' , 'ArticlesController@saveComment')->name('save-comment');
 Route::get('dashboard' , 'HomeController@dashboard')->name('users-dashboard')->middleware('auth');
-Route::get('edit-account' , 'HomeController@editPage')->name('edit-page')->middleware('auth');;
-Route::post('edit-account', 'HomeController@updateUserInformation')->name('update-information')->middleware('auth');;
+Route::get('edit-account' , 'HomeController@editPage')->name('edit-page')->middleware('auth');
+Route::post('edit-account', 'HomeController@updateUserInformation')->name('update-information')->middleware('auth');

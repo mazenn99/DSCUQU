@@ -10,7 +10,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand  data-scroll"><img src="{{asset('site')}}/images/dsc-logo.png" alt=""></a>
+                    <a href="https://www.dsc-uqu.com" class="navbar-brand  data-scroll"><img src="{{asset('site')}}/images/dsc-logo.png" alt=""></a>
                 </div>
 
                 <div class="collapse navbar-collapse edu-nav  main-menu" id="bs-example-navbar-collapse-1">

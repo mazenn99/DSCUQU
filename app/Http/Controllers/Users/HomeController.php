@@ -116,18 +116,22 @@ class HomeController extends Controller
         ]);
         return redirect()->back();
     }
-    
+
     public function sendContactUsMessage(Request $request) {
-            $request->validate([
-                'email'   => 'required|email',
-                'message' => 'required|string|max:600',
-            ]);
-            
-            Mail::to('mazenn99@gmail.com')
-                    ->send(new sendContactUsMessage([
-                        'email' => $request->input('email'),
-                        'message' => $request->input('message')
-                        ]));
-        }
+
+        $request->validate([
+            'email' => 'required|email|max:80',
+            'message' => 'required|max:500'
+        ]);
+         Mail::raw($request->input('message'), function ($message) use ($request) {
+                 $message->from($request->input('email'));
+                 $message->sender($request->input('email'));
+                 $message->to(config('app.info-mail'));
+                 $message->subject('contact us message');
+                 $message->priority(3);
+             });
+         return redirect()->back();
     }
+
+}
 

@@ -19,17 +19,4 @@ Route::get('attend-courses/{hash}' , 'Admin\attendCourseController@showTablesAtt
 Route::post('confirm-courses-attend' , 'Admin\attendCourseController@confirmAttend')->name('confirm-attend');
 Route::post('send-contact-us-message' , 'Users\HomeController@sendContactUsMessage')->name('send-contact-us-message');
 
-//Route::get('test' , function() {
-//    $img = Image::make(asset('site/images/certificate/certificate.jpg'));
-//    $img->text('mazen' , 50 , 50 , function($font) {
-//       $font->file('admin/site/fonts/fontawesome-webfont.ttf');
-//       $font->size(24);
-//       $font->color('#DD999');
-//       $font->align('center');
-//#       $font->angel('45');
-//    });
-//    return $img->response('jpg');
-//});
-
-
 

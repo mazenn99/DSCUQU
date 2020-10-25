@@ -9,13 +9,13 @@
 						<h1>نادي الطلبة المطورين</h1>
 					<p>  حيثُ نور المعرفة و سِهام التطوير و سُبل التعليم نضعها بين أيدي الشغوفين <br>  نصنع به مستقبلاً زاهراً لكل الحالمين <br> </p>
                         <p>يسعدنا انضمامك لتكون جزءّا من القصة</p>
-						<a href="https://docs.google.com/forms/d/1t6Rh2BuBIZMSxDCMvvdrZEo-4G55OWE2KREdya4jIzA/edit" class="el-btn-regular slider-btn-left" targe="_blank">طلب الإنضمام</a> 
-				
+						<a href="https://docs.google.com/forms/d/1t6Rh2BuBIZMSxDCMvvdrZEo-4G55OWE2KREdya4jIzA/edit" class="el-btn-regular slider-btn-left" target="_blank">طلب الإنضمام</a>
+
 				</div>
-                                                                                
+
                 </div>
             </div>
-          
+
             </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
@@ -43,10 +43,10 @@
                         <img src="{{asset('site')}}/images/index-02/reading.png" alt="">
                     </div>
                     <div class="wel-text">
-                      
+
                         <h3>نتعلّم</h3>
-						<p style="font-size: 18px;"> 
-						نفتح لك آفاقًا واسعة وبوابة للعبور الزمني لتصوّر شكل العالم التقني الحديث </p> 
+						<p style="font-size: 18px;">
+						نفتح لك آفاقًا واسعة وبوابة للعبور الزمني لتصوّر شكل العالم التقني الحديث </p>
                     </div>
                 </div>
             </div>

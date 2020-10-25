@@ -8,6 +8,11 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\sendContactUsMessage;
+use Illuminate\Validation\Rule;
+
+
 
 class HomeController extends Controller
 {
@@ -95,20 +100,34 @@ class HomeController extends Controller
         return view('users.edit');
     }
 
-    public function updateUserInformation(UpdateUserInformation $request) {
+    public function updateUserInformation(Request $request) {
+        $request->validate([
+            'username' => 'required|string|max:50',
+            'email'    => 'required|email|max:80|unique:users,email,' . Auth::id(),
+            'sex'      => 'required|numeric|between:0,1',
+            'password' => 'nullable|max:200'
+        ]);
         $user = User::find(Auth::id());
-        $sex;
-        switch ($request->input('sex')) {
-            case 0 : $sex = 0;
-            break;
-            case 1 : $sex = 1;
-        }
         $user->update([
             'name'     => $request->input('username'),
             'email'    => $request->input('email'),
             'password' => $request->input('password') ? Hash::make($request->input('password')) : $user->password,
-            'sex'      => $sex,
+            'sex'      => $request->input('sex'),
         ]);
         return redirect()->back();
     }
-}
+    
+    public function sendContactUsMessage(Request $request) {
+            $request->validate([
+                'email'   => 'required|email',
+                'message' => 'required|string|max:600',
+            ]);
+            
+            Mail::to('mazenn99@gmail.com')
+                    ->send(new sendContactUsMessage([
+                        'email' => $request->input('email'),
+                        'message' => $request->input('message')
+                        ]));
+        }
+    }
+

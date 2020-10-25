@@ -28,7 +28,6 @@ $factory->define(\App\Models\Courses::class, function (Faker $faker) {
         'collage_id'        => \App\Models\Collages::find(1),
         'status'            => $faker->numberBetween('0' , '1'),
         'certificate'       => $faker->numberBetween('0', '1'),
-        'auto_registration' => $faker->numberBetween('0', '1'),
         'maximum_attend'    => $faker->numberBetween('1' , '200'),
         'live_url'          => $faker->url,
     ];

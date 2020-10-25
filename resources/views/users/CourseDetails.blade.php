@@ -80,7 +80,7 @@
     </style>
 @endsection
 @section('content')
-    <body class="event-details-1 home_version_03 home_version_02 home_version_04">
+    <body class="event-details-1 home_version_03 home_version_02">
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>
@@ -134,6 +134,7 @@
                                             <div class="description-text-right">
                                                 <h3> About this event:</h3>
                                                 <p>{{$course->details}}</p>
+                                                
                                                 <h3> Speaker:</h3>
                                                 <div class="col-sm-12 col-md-12">
                                                     <div class="more-events">
@@ -162,12 +163,6 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <button id="register"
-                                                                                        class="btn btn-primary"
-                                                                                        value="{{$course->id}}"
-                                                                                >Register
-                                                                                    <i id="spinner" class="fa fa-spinner fa-spin" style="display: none"></i>
-                                                                                </button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -175,9 +170,32 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
+                                                
                                             </div>
                                         </div>
+                                        
+                                        <div class='col-sm-12 col-md-12'>
+                                            <div class="jumbotron">
+                                            @auth
+                                            <h1 dir='rtl' class="display-4">للتسجيل في الدورة</h1>
+                                            <p dir='rtl' class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط الدورة على ايميلك المسجل في موقعنا</p>
+                                                <hr class="my-4">
+                                            <p class="lead">
+                                                <a dir='rtl' class="btn btn-primary btn-lg" href="#" role="button">للتسجيل اضغط هنا</a>
+                                            </p>
+                                            @else
+                                            <p dir='rtl' class="text-danger">يجب
+                                                <a href='{{route('register')}}'>التسجيل</a>
+                                                او 
+                                                <a href='{{route('login')}}'>تسجيل الدخول</a>
+                                                للتسجيل في الدورة
+                                            </p>
+                                            @endauth
+                                            </div>
+                                        </div>
+                                        
                                         <div class="col-sm-12 col-md-12">
                                             <div class="more-events">
                                                 <div class="row">

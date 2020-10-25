@@ -1,7 +1,7 @@
 @extends('users.template.master')
 @section('title' , 'Dashboard ' . Auth::user()->name)
 @section('content')
-    <body class="t-profile-01 home_version_03 home_version_02 home_version_04">
+    <body class="t-profile-01 home_version_03 home_version_02">
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>
@@ -9,12 +9,15 @@
 
     <!-- Teachers Area section -->
     <section class="teacher-prolile-01 home_version_03 home_version_02 home_version_04">
-        <div class="container">
+        <div class="container" dir="rtl">
             <div class="row">
                 <div class="col-sm-9 t-profile-right">
                     <div class="row courses-instuctor">
                         <div class="col-sm-12">
-                            <h3 class="courses-title">ALl Courses You Registered</h3>
+                            <h3 class="courses-title">
+                            جميع الدورات المسجلة لــ  
+                            {{Auth::user()->name}}
+                            </h3>
                             <div class="row item-margin">
                                 @foreach(\App\User::find(\Illuminate\Support\Facades\Auth::id())->usersCourses()->where('users_id' , \Illuminate\Support\Facades\Auth::id())->get() as $courses)
                                     <div class="col-sm-6 instractor-single pb-2">

@@ -14,9 +14,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="intro-text ">
-                                <h1>Blog Page</h1>
-                                <p><span><a href="">Home <i class='fa fa-angle-right'></i></a></span><span
-                                        class="b-active"> Blog Page</span></p>
+                                <h1>Blog Pages</h1>
                             </div>
                         </div>
                     </div><!-- /.row -->
@@ -78,7 +76,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="categories-item">
-                                    <h3>Categories</h3>
+                                    <h3 dir="rtl">الأقسام</h3>
                                     <ul class="list-unstyled">
                                         @foreach(\App\Models\Section::orderBy('name')->get() as $section)
                                             <li><a href="#"><i

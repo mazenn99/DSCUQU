@@ -5,7 +5,7 @@
 			<div  class=" col-sm-12 footer-content-box ">
 				<div class="col-sm-6"  style="margin-top:4%;" >
 				
-                <p > نادي الطلبة المطورين بجامعة أم القرى بدعم رسمي من قوقل نهدف إلى نشر المعرفة التقنية في المجتمع الجامعي </p>
+                <p> نادي الطلبة المطورين بجامعة أم القرى بدعم رسمي من قوقل نهدف إلى نشر المعرفة التقنية في المجتمع الجامعي </p>
                     
                     <div class="footer-icon">
                         <ul class="list-unstyled" style="display:inline-block">
@@ -22,11 +22,18 @@
 				
                     
 
-					<form action="#">
+					<form action="{{route('send-contact-us-message')}}" method="POST">
+					    @csrf
 						<fieldset class="form-group">
-                            <input type="email" class="form-control rounded-0" id="exampleInputEmail1"  placeholder="الإسم"> </fieldset>
+                            <input type="email" class="form-control rounded-0" id="exampleInputEmail1" name="email"  placeholder="الإيميل"> </fieldset>
+                            @error('email')
+                            <small class="form-text text-danger">{{$message}}</small>
+                            @enderror
                        <div class="form-group">
-                     <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"  placeholder="الرسالة"></textarea>
+                     <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="message"  placeholder="الرسالة"></textarea>
+                            @error('message')
+                            <small class="form-text text-danger">{{$message}}</small>
+                            @enderror
                        </div>
                           <div class="form-group">
 							<div class="submit-btn">
@@ -46,8 +53,16 @@
 			<div class="footer-bottom-inner">
 				<div class="row">
 					
-					<div class="col-md-12 col-sm-12 footer-no-padding" style="">
-						<p>&copy; Copyright 2019 EcologyTheme </p>
+					<div class="col-md-12 col-sm-12 footer-no-padding text-center" style="">
+					 <p>Copyright © <br> تمت برمجة الموقع بواسطة قادة نادي الطلبة المطورين
+					 <br>
+					 <a href="https://www.twitter.com/aaysha15" target="_blank">@aysha</a>
+					 && 
+					 <a href="https://www.twitter.com/mazenn99" target="_blank">@mazen</a>
+                        <!--Made with ❤️ by <a href="https://www.twitter.com/mazenn99">@mazenn99</a>  also with ❤️ by-->
+                        <!--<a href="https://twitter.com/aaysha15">@aaysha15.</a>-->
+                        <!--To our lovely Community ❤️-->
+                    </p>
 					</div>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 @extends('users.template.master')
 @section('title' , 'الصفحة الرئيسية')
 @section('content')
-    <body class="event-01">
+    <body class="event-01 home_version_03 home_version_02 ">
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>

@@ -54,7 +54,11 @@ class CoursesController extends Controller
     public function show($slug)
     {
         $course = Courses::where('slug' , $slug)->first();
-        return view('users.CourseDetails' ,compact('course'));
+        if($course) {
+            return view('users.CourseDetails' ,compact('course'));
+        } else {
+            return abort('404');
+        }
     }
 
     public function registerAction(Request $request) {

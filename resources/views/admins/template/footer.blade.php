@@ -4,11 +4,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="copyright">
-                    <p>Copyright © <br>
-                        Made with ❤️ by <a href="https://www.twitter.com/mazenn99">@mazenn99</a>  also with ❤️ by
-                        <a href="https://twitter.com/aaysha15">@aaysha15.</a>
-                        To our lovely Community ❤️
+                    
+					 <p>Copyright © <br> تمت برمجة الموقع بواسطة قادة نادي الطلبة المطورين
+					 <br>
+					 <a href="https://www.twitter.com/aaysha15" target="_blank">@aysha</a>
+					 && 
+					 <a href="https://www.twitter.com/mazenn99" target="_blank">@mazen</a>
                     </p>
+					</div>
                 </div>
             </div>
         </div>

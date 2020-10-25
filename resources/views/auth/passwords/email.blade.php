@@ -58,14 +58,17 @@
             <div class="col-sm-6 col-sm-offset-3">
                 <form method="POST" action="{{ route('password.email') }}" class="learnpro-register-form text-center">
                     @csrf
-                    <p>Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                    <p>
+                        هل نسيت كلمه المرور ؟
+                         الرجاء ادخال الايميل المسجل لدينا لاعاده تعين كلمة المرور
+                    </p>
                     @if (session('status'))
                                             <div class="alert alert-success" role="alert">
                                                 {{ session('status') }}
                                             </div>
                                         @endif
                     <div class="form-group">
-                        <input autocomplete="off" class="required form-control" placeholder="email" name="email" type="text">
+                        <input autocomplete="off" class="required form-control" placeholder="الايميل" value="{{old('email')}}" name="email" type="text">
                         @error('email')
                         <span class="text-danger invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
@@ -73,7 +76,9 @@
                         @enderror
                     </div>
                     <div class="form-group register-btn">
-                        <button class="btn btn-primary btn-lg">Forgot Password</button>
+                        <button class="btn btn-primary btn-lg">
+                            تعين كلمة المرور
+                        </button>
                     </div>
                 </form>
             </div>

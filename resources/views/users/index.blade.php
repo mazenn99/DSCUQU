@@ -20,7 +20,7 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
 @endsection
-<body class="home_version_03 home_version_02 home_version_04">
+<body class="home_version_03 home_version_02">
 <!-- Preloader -->
 <div id="preloader">
     <div id="status">&nbsp;</div>
@@ -91,13 +91,13 @@
         </div>
 
         <div class="row">
-            @foreach(\App\Models\Courses::limit(5)->get() as $course)
+            @foreach(\App\Models\Courses::orderBy('id' , 'DESC')->limit(5)->get() as $course)
                 <div class="col-sm-12 events-full-box">
                     <a href="{{route('All-courses.show' , $course->slug)}}">
                     <div class="events-single-box">
                         <div class="row">
                             <div class="col-sm-5">
-                                <img src="{{$course->picture}}" alt="" class="img-responsive">
+                                <img src="{{asset('site/images/dsc-logo.png')}}" style="margin-top:22%;margin-left:5%;" alt="dsc-logo" width="50px" height="59px" class="img-responsive img-fluid">
                             </div>
 
                             <div class="col-sm-7 event-info">

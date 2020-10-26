@@ -35,7 +35,7 @@ class CourseConfirmationLink extends Mailable
     {
         return $this->
 
-        from('noreply@fnbtime.com')
+        from(Config('app.no-reply-mail'))
             ->markdown('emails.CourseConfirmationLink');
     }
 }

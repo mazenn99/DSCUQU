@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fee78a14-52ed-47f8-bdc3-0c77a2fbcf21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/CoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/CourseConfirmationLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/CourseConfirmationLink.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Collages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Collages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../xampp/htdocs/laravel/mojeebCourse" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -154,17 +154,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\users" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\app\Models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\DSC-UQU-LARAVEL-LIVE\DSC-UQU-LARAVEL" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\certificate" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\super" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images\icon" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\users" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\app\Models" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -244,7 +244,9 @@
       <workItem from="1601792266566" duration="1421000" />
       <workItem from="1601929875386" duration="1157000" />
       <workItem from="1602141691121" duration="588000" />
-      <workItem from="1603637418219" duration="5294000" />
+      <workItem from="1603637418219" duration="5439000" />
+      <workItem from="1603649647642" duration="5852000" />
+      <workItem from="1603706913933" duration="4365000" />
     </task>
     <servers />
   </component>
@@ -269,10 +271,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="174" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601282642850" />
-    <state x="634" y="174" key="FileChooserDialogImpl" timestamp="1603637644868">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1603711455338">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599121044657" />
+    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603711455338" />
     <state x="634" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603637644868" />
     <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1601073818891">
       <screen x="0" y="0" width="1920" height="1080" />

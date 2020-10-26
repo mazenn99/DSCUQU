@@ -1,5 +1,5 @@
 @extends('users.template.master')
-@section('title' , 'الصفحة الرئيسية')
+@section('title' , 'Developer Student Club | نادي الطلبة المطورين')
 @section('content')
 @section('photo')
     <div class="container">

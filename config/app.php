@@ -27,7 +27,8 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
-    'info-mail' => 'info@dsc-uqu.com' ,
+    'info-mail' => 'info@dsc-uqu.com',
+    'no-reply-mail' => 'no-reply@dsc-uqu.com',
 
     /*
     |--------------------------------------------------------------------------

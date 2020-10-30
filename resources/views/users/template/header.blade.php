@@ -19,7 +19,7 @@
         <meta name="author" content="Mazen Alojeel & Aysha Basharaf @ DSC Leaders">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title' , 'DSC-UQU')</title>
+    <title>@yield('title' , 'نادي الطلبة المطورين')</title>
     <link rel="shortcut icon" href="{{asset('site')}}/images/fav-icon/dsc-logo-fav.png" type="image/x-icon" >
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('site')}}/css/assets/bootstrap.min.css">

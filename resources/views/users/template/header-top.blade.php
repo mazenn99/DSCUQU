@@ -35,7 +35,7 @@
                                     تعديل الملف الشخصي
                                     </a></li>
                                     <li><a href="{{route('users-dashboard')}}">
-                                    الدورات المسجلة
+                                    الدورات المسجلة - الشهادات
                                     </a></li>
                                     <li><a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a></li>
                                 </ul>
@@ -82,4 +82,4 @@
             </form>
         </div>
     @endif
-    @endauth
+@endauth

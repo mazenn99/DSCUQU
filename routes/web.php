@@ -18,5 +18,4 @@ Auth::routes(['verify' => true]);
 Route::get('attend-courses/{hash}' , 'Admin\attendCourseController@showTablesAttendCourses');
 Route::post('confirm-courses-attend' , 'Admin\attendCourseController@confirmAttend')->name('confirm-attend');
 Route::post('send-contact-us-message' , 'Users\HomeController@sendContactUsMessage')->name('send-contact-us-message');
-
-
+Route::post('certificates' , 'Users\HomeController@certificate')->name('get-certificate')->middleware('auth');

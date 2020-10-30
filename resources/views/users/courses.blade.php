@@ -20,7 +20,7 @@
                             <div class="events-single-box">
                                 <div class="row">
                                     <div class="col-sm-5">
-                                        <img src="{{$course->picture}}" alt="" class="img-responsive">
+                                        <img src="{{asset('site/images/dsc-logo.png')}}" style="margin-top:22%;margin-left:5%;" alt="dsc-logo" width="45px" height="59px" class="img-responsive img-fluid">
                                     </div>
 
                                     <div class="col-sm-7 event-info">

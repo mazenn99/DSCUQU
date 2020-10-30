@@ -19,7 +19,7 @@
                         @isset($attendsLink)
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       value="{{'http://localhost/DSC-UQU-SITE/public/attend-courses/'.$attendsLink->hash}}">
+                                       value="{{base_path() . '/attend-courses/'.$attendsLink->hash}}" disabled>
                             </div>
                         @endisset
                         @include('admins._partial.success')
@@ -37,8 +37,8 @@
                                     <tr>
                                         <td>{{$sub->name}}</td>
                                         <td>
-                                            @if(\App\Models\Certificate::where('users_id' , $sub->id)->first())
-                                                {!! 'Yes' !!}
+                                            @if(\App\Models\Certificate::where(['users_id' => $sub->id , 'courses_id' => $sub->pivot->courses_id])->exists())
+                                                {{'Yes'}}
                                             @endif
                                         </td>
                                         <td>
@@ -51,7 +51,7 @@
                                                         class="btn btn-sm btn-danger btn-outline-danger">Delete
                                                 </button>
                                             </form>
-                                            @if(!(\App\Models\Certificate::where('users_id' , $sub->id)->first()))
+                                            @if(!(\App\Models\Certificate::where(['users_id' => $sub->id , 'courses_id' => $sub->pivot->courses_id])->exists()))
                                                 <form action="{{route('confirm-attend')}}" method="POST"
                                                       class="d-inline-block">
                                                     @csrf

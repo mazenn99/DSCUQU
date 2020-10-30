@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\attendCourses;
 use App\Models\Certificate;
 use App\Models\Courses;
+use App\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class attendCourseController extends Controller
 {
@@ -43,6 +45,8 @@ class attendCourseController extends Controller
             'users_id'   => $request->input('userID'),
             'created_at' => NOW(),
         ]);
+        $user = User::select('email' , 'name')->find($request->input('userID'));
+        Mail::to($user->email)->send(new \App\Mail\Certificate($user->name));
         return redirect()->back()->with(['msg' => 'Successfully Created Certificate']);
     }
 }

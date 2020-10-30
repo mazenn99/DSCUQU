@@ -35,7 +35,7 @@
                                     تعديل الملف الشخصي
                                     </a></li>
                                     <li><a href="{{route('users-dashboard')}}">
-                                    الدورات المسجلة
+                                    الدورات المسجلة - الشهادات
                                     </a></li>
                                     <li><a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">تسجيل الخروج</a></li>
                                 </ul>
@@ -54,5 +54,32 @@
         </form>
         @yield('photo')
     </div>
+    <!--  End header section-->
 </header>
-<!--  End header section-->
+@auth
+    @if(Auth::user()->email_verified_at == NULL)
+        <div class="alert alert-warning alert-dismissible text-center" role="alert" dir="rtl">
+            <div class="h4">
+                <strong>
+                    اهلا بك  {{Auth::user()->name}}
+                </strong>
+                حسابك غير مفعل     فضلا قم بتأكيد حسابك بالضغط على الرابط المرسل على ايميلك
+            </div>
+            <br>
+            <a onclick="event.preventDefault();
+                      document.getElementById('resend').submit();">
+                الرجاء الضغط هنا لارسال ايميل تفعيل جديد
+            </a>
+            <br>
+            @if(session('resent'))
+                تم ارسال رابط تحقق جديد على ايميلك , تفقد البريد الغير هام
+            @endif
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <form id="resend" action="{{route('verification.resend')}}" method="POST" style="display:none">
+                @csrf
+            </form>
+        </div>
+    @endif
+@endauth

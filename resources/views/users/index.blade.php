@@ -9,14 +9,9 @@
 						<h1>نادي الطلبة المطورين</h1>
 					<p>  حيثُ نور المعرفة و سِهام التطوير و سُبل التعليم نضعها بين أيدي الشغوفين <br>  نصنع به مستقبلاً زاهراً لكل الحالمين <br> </p>
                         <p>يسعدنا انضمامك لتكون جزءّا من القصة</p>
-						<a href="https://docs.google.com/forms/d/1t6Rh2BuBIZMSxDCMvvdrZEo-4G55OWE2KREdya4jIzA/edit" class="el-btn-regular slider-btn-left" targe="_blank">طلب الإنضمام</a> 
-				
+						<a href="https://forms.gle/VRYY1gSkipNaaTzk7" class="el-btn-regular slider-btn-left" target="_blank">طلب الإنضمام</a>
+                    </div>
 				</div>
-                                                                                
-                </div>
-            </div>
-          
-            </div>
         </div><!-- /.row -->
     </div><!-- /.container -->
 @endsection
@@ -43,10 +38,10 @@
                         <img src="{{asset('site')}}/images/index-02/reading.png" alt="">
                     </div>
                     <div class="wel-text">
-                      
+
                         <h3>نتعلّم</h3>
-						<p style="font-size: 18px;"> 
-						نفتح لك آفاقًا واسعة وبوابة للعبور الزمني لتصوّر شكل العالم التقني الحديث </p> 
+						<p style="font-size: 18px;">
+						نفتح لك آفاقًا واسعة وبوابة للعبور الزمني لتصوّر شكل العالم التقني الحديث </p>
                     </div>
                 </div>
             </div>
@@ -109,7 +104,7 @@
 								</span>
                                     <span>
 									<i class="fa fa-clock-o event-icon"></i>
-									{{$course->start_time}} - {{$course->end_time}}
+									{{$course->start_time}} -- {{$course->end_time}}
 								</span>
                                     <span>
 									<i class="fa fa-map-marker event-icon"></i>
@@ -137,7 +132,7 @@
 
                                 <p>{{$course->details}}</p>
 
-                                <a class="event-btn" href="#">Read More<i
+                                <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">Read More<i
                                         class="fa fa-long-arrow-right events-btn-icon"></i></a>
                             </div>
                         </div>

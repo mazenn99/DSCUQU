@@ -8,21 +8,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DSC-UQU-SITE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CRUDCoursesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/attendCourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/attendCourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/CourseConfirmationLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/CourseConfirmationLink.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/super/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/template/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/template/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/CourseDetails.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/courses/subscription.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/courses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header-top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/template/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/template/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +50,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
@@ -82,7 +78,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
@@ -110,7 +105,6 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
@@ -145,6 +139,7 @@
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/arutil/ar-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gpQiTRAea0E8HLWPm6yOz8QKML" />
@@ -155,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/site/images/certificate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fnbtime/fnbtime_1.0" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -166,17 +161,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-LARAVEL-LIVE\DSC-UQU-LARAVEL\public\site\images\certificate" />
+      <recent name="C:\laragon\www\DSC-UQU-LARAVEL-LIVE\DSC-UQU-LARAVEL\public\site\fonts" />
+      <recent name="C:\laragon\www\DSC-UQU-LARAVEL-LIVE\DSC-UQU-LARAVEL" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\certificate" />
+      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\super" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\DSC-UQU-LARAVEL-LIVE\DSC-UQU-LARAVEL\resources\views\emails" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\users" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\database\migrations\relations" />
       <recent name="C:\laragon\www\DSC-UQU-SITE\app\Models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\certificate" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\resources\views\admins\super" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images\icon" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\public\admin\images" />
-      <recent name="C:\laragon\www\DSC-UQU-SITE\public\site\images\comment" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -256,6 +252,18 @@
       <workItem from="1601792266566" duration="1421000" />
       <workItem from="1601929875386" duration="1157000" />
       <workItem from="1602141691121" duration="588000" />
+      <workItem from="1603637418219" duration="5439000" />
+      <workItem from="1603649647642" duration="5852000" />
+      <workItem from="1603706913933" duration="6004000" />
+      <workItem from="1603733786300" duration="683000" />
+      <workItem from="1603736781383" duration="5126000" />
+      <workItem from="1603820193251" duration="8149000" />
+      <workItem from="1603879665715" duration="4323000" />
+      <workItem from="1603884630970" duration="3840000" />
+      <workItem from="1603906628382" duration="3347000" />
+      <workItem from="1603969635267" duration="43000" />
+      <workItem from="1603994670949" duration="1537000" />
+      <workItem from="1604053405040" duration="31000" />
     </task>
     <servers />
   </component>
@@ -280,11 +288,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="174" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601282642850" />
-    <state x="634" y="174" key="FileChooserDialogImpl" timestamp="1601283397132">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2554" y="174" key="FileChooserDialogImpl" timestamp="1604053447581">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599121044657" />
-    <state x="634" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1601283397132" />
+    <state x="2554" y="174" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604053447581" />
+    <state x="634" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603637644868" />
     <state width="1851" height="277" key="GridCell.Tab.0.bottom" timestamp="1601073818891">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -305,6 +313,10 @@
     </state>
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907733545" />
     <state width="1851" height="277" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601073818891" />
+    <state x="2538" y="148" key="NewPhpClassDialog" timestamp="1603825788622">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2538" y="148" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603825788622" />
     <state x="784" y="426" key="NewPhpFileDialog" timestamp="1601560305415">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -314,18 +326,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="711" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1600695752803" />
-    <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1598907096913">
+    <state x="2513" y="126" width="734" height="828" key="find.popup" timestamp="1603880444894">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598907096913" />
+    <state x="2513" y="126" width="734" height="828" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603880444894" />
     <state x="448" y="242" key="run.anything.popup" timestamp="1601051747519">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="448" y="242" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601051747519" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1601559698656">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1603880393963">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599120176489" />
+    <state x="2373" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603880393963" />
     <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601559698656" />
   </component>
   <component name="XDebuggerManager">

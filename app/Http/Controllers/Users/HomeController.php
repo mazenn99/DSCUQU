@@ -4,18 +4,22 @@ namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateUserInformation;
+use App\Models\Certificate;
+use App\Models\Courses;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\sendContactUsMessage;
-use Illuminate\Validation\Rule;
-
+use Intervention\Image\Facades\Image;
+use ArUtil\I18N\Arabic;
 
 
 class HomeController extends Controller
 {
+    private static $NAME_SIZE_CERTIFICATE = 50;
+    private static $TITLE_SIZE_CERTIFICATE = 33;
+    private static $DATE_SIZE_CERTIFICATE = 28;
     /**
      * Display a listing of the resource.
      *
@@ -116,18 +120,61 @@ class HomeController extends Controller
         ]);
         return redirect()->back();
     }
-    
+
     public function sendContactUsMessage(Request $request) {
-            $request->validate([
-                'email'   => 'required|email',
-                'message' => 'required|string|max:600',
-            ]);
-            
-            Mail::to('mazenn99@gmail.com')
-                    ->send(new sendContactUsMessage([
-                        'email' => $request->input('email'),
-                        'message' => $request->input('message')
-                        ]));
-        }
+
+        $request->validate([
+            'email' => 'required|email|max:80',
+            'message' => 'required|max:500'
+        ]);
+         Mail::raw($request->input('message'), function ($message) use ($request) {
+                 $message->from($request->input('email'));
+                 $message->sender($request->input('email'));
+                 $message->to(config('app.info-mail'));
+                 $message->subject('contact us message');
+                 $message->priority(3);
+             });
+         return redirect()->back();
     }
+
+
+    /*
+     * this to create and download certificate
+     */
+
+    public function certificate(Request $request) {
+        if(!(Certificate::where(['courses_id' => $request->input('courseID') , 'users_id' => Auth::id()])->exists())) {
+            die("
+            fuck off from here | DO YOU THINK I'M STUPID TO MISS SOMETHING LIKE THIS
+                <br>
+            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+            ");
+        }
+        $Arabic = new Arabic('Glyphs');
+        $course = Courses::select('title' , 'course_date')->where('id' , $request->input('courseID'))->first();
+        $img = Image::make('site/images/certificate/certificate_attend.jpg');
+        $img->text($Arabic->utf8Glyphs(Auth::user()->name) , 550 , 330 , function($font) {
+            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->size($this::$NAME_SIZE_CERTIFICATE);
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($Arabic->utf8Glyphs($course->title) , 550 , 480 , function($font) {
+            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->size($this::$TITLE_SIZE_CERTIFICATE);
+            $font->color('#00000');
+            $font->align('center');
+            $font->valign('top');
+        });
+        $img->text($course->course_date , 400 , 591 , function($font) {
+            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->size($this::$DATE_SIZE_CERTIFICATE);
+            $font->align('left');
+            $font->valign('top');
+        });
+        return $img->response('jpg');
+
+    }
+
+}
 

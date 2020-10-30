@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class CourseConfirmationLink extends Mailable
+class Certificate extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,13 +17,9 @@ class CourseConfirmationLink extends Mailable
      * @return void
      */
     public $name;
-    public $courseLink;
-    public $courseTitle;
-    public function __construct($name , $title , $link)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->courseLink = $title;
-        $this->courseLink = $link;
     }
 
     /**
@@ -33,7 +29,8 @@ class CourseConfirmationLink extends Mailable
      */
     public function build()
     {
-        return $this->from(Config('app.no-reply-mail'))
-            ->markdown('emails.CourseConfirmationLink');
+        return $this->
+                subject('Certificate of Attends')->
+                from(Config('app.no-reply-mail'))->markdown('emails.Certificate');
     }
 }

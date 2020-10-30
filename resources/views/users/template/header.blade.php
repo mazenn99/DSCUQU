@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="{{config('app.local_ar')}}">
 <head>
+    <meta charset="utf-8">
     <script data-ad-client="ca-pub-4082826502663993" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="
 نادي الطلبة المطورين
@@ -14,7 +14,7 @@
     نادي الطلبة المطورين مكة
      , نادي الطلبة المطورين جامعة ام القرى
     نادي المطورين مكة ,
-    
+
     dscuqu , dsc, developer student clubs , uqudsc , نادي الطلبة المطورين , نادي المطورين , ">
         <meta name="author" content="Mazen Alojeel & Aysha Basharaf @ DSC Leaders">
 
@@ -41,14 +41,14 @@
     <link rel="stylesheet" href="{{asset('site')}}/css/style.css">
     <link rel="stylesheet" href="{{asset('site')}}/css/responsive.css">
 <style>
-        
+
         .footer-icon-li {
             display:inline-block;
             margin:0 20px;
         }
-    
-    </style> 
-    
+
+    </style>
+
     @yield('style')
      <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180165590-1"></script>
@@ -56,7 +56,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'UA-180165590-1');
     </script>
 </head>

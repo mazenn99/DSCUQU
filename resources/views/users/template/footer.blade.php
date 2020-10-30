@@ -4,9 +4,9 @@
 		<div class="row">
 			<div  class=" col-sm-12 footer-content-box ">
 				<div class="col-sm-6"  style="margin-top:4%;" >
-				
+
                 <p> نادي الطلبة المطورين بجامعة أم القرى بدعم رسمي من قوقل نهدف إلى نشر المعرفة التقنية في المجتمع الجامعي </p>
-                    
+
                     <div class="footer-icon">
                         <ul class="list-unstyled" style="display:inline-block">
                             <li class="footer-icon-li"><span><a id="icon" target="_blank" href="https://twitter.com/DSCUQU"><i class="fa fa-twitter twitter fa-2x"></i></a></span></li>
@@ -14,25 +14,25 @@
                         </ul>
                     </div>
 
-				</div>	
-                        
+				</div>
+
 
 				<div class="col-sm-3" dir="rtl" style="margin-left: 10%;">
 					<h3 align="center" >تواصل معنا</h3>
-				
-                    
+
+
 
 					<form action="{{route('send-contact-us-message')}}" method="POST">
 					    @csrf
 						<fieldset class="form-group">
-                            <input type="email" class="form-control rounded-0" id="exampleInputEmail1" name="email"  placeholder="الإيميل"> </fieldset>
+                            <input type="email" class="form-control rounded-0" name="email"  placeholder="الإيميل"> </fieldset>
                             @error('email')
-                            <small class="form-text text-danger">{{$message}}</small>
+                                <small class="form-text text-danger">{{$message}}</small>
                             @enderror
                        <div class="form-group">
-                     <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="message"  placeholder="الرسالة"></textarea>
+                     <textarea class="form-control rounded-0" rows="3" name="message"  placeholder="الرسالة"></textarea>
                             @error('message')
-                            <small class="form-text text-danger">{{$message}}</small>
+                                <small class="form-text text-danger">{{$message}}</small>
                             @enderror
                        </div>
                           <div class="form-group">
@@ -52,12 +52,11 @@
 		<div class="container">
 			<div class="footer-bottom-inner">
 				<div class="row">
-					
 					<div class="col-md-12 col-sm-12 footer-no-padding text-center" style="">
 					 <p>Copyright © <br> تمت برمجة الموقع بواسطة قادة نادي الطلبة المطورين
 					 <br>
 					 <a href="https://www.twitter.com/aaysha15" target="_blank">@aysha</a>
-					 && 
+					 &&
 					 <a href="https://www.twitter.com/mazenn99" target="_blank">@mazen</a>
                         <!--Made with ❤️ by <a href="https://www.twitter.com/mazenn99">@mazenn99</a>  also with ❤️ by-->
                         <!--<a href="https://twitter.com/aaysha15">@aaysha15.</a>-->
@@ -67,9 +66,32 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- ./ End footer-bottom -->		
+	</div><!-- ./ End footer-bottom -->
 </footer><!-- ./ End Footer Area section -->
 
+@auth
+    @if(Auth::user()->email_verified_at != NULL)
+        <div class="modal" id="verificationModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+@endauth
 
 <!-- ============================
 JavaScript Files
@@ -108,6 +130,7 @@ JavaScript Files
 <script type="text/javascript" src="{{asset('site')}}/js/assets/revolution/revolution.js"></script>
 <!-- Custom JS -->
 <script src="{{asset('site')}}/js/custom.js"></script>
+
 @yield('script')
 </body >
 </html>

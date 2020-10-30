@@ -94,7 +94,8 @@
                     <div class="row">
                         <div class="col-sm-12 ">
                             <div class="post-img-box">
-                                <img src="{{$course->picture}}" alt="" class="img-responsive">
+                                <img src="{{asset('site/images/
+hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                             </div>
                             <div class="clock-countdown">
                                 <div class="site-config"></div>
@@ -134,7 +135,7 @@
                                             <div class="description-text-right">
                                                 <h3> About this event:</h3>
                                                 <p>{{$course->details}}</p>
-                                                
+
                                                 <h3> Speaker:</h3>
                                                 <div class="col-sm-12 col-md-12">
                                                     <div class="more-events">
@@ -170,32 +171,37 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
-                                        
+
                                         <div class='col-sm-12 col-md-12'>
                                             <div class="jumbotron">
                                             @auth
-                                            <h1 dir='rtl' class="display-4">للتسجيل في الدورة</h1>
+                                            <h3 dir='rtl' class="display-2">للتسجيل في الدورة</h3>
                                             <p dir='rtl' class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط الدورة على ايميلك المسجل في موقعنا</p>
                                                 <hr class="my-4">
                                             <p class="lead">
-                                                <a dir='rtl' class="btn btn-primary btn-lg" href="#" role="button">للتسجيل اضغط هنا</a>
+                                                @if(Auth::user()->email_verified_at != NULL)
+                                                    <button dir="rtl" data-value="{{$course->id}}" id="register" class="btn btn-success btn-block btn-lg mx-3">
+                                                        للتسجيل اضغط هنا</button>
+                                                    @else
+                                                    <p dir='rtl' class="text-danger">يجب عليك تفعيل ايميلك بالضغط على الرابط المرسل الى ايميلك عند التسجيل</p>
+                                                    @endif
                                             </p>
                                             @else
                                             <p dir='rtl' class="text-danger">يجب
                                                 <a href='{{route('register')}}'>التسجيل</a>
-                                                او 
+                                                او
                                                 <a href='{{route('login')}}'>تسجيل الدخول</a>
                                                 للتسجيل في الدورة
                                             </p>
                                             @endauth
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-sm-12 col-md-12">
                                             <div class="more-events">
                                                 <div class="row">
@@ -288,33 +294,29 @@
                 timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
             }
             settimer();
-        </script>
-        <script>
-            $('#register').on('click' , function() {
-                let btnVal = $(this).val();
-                $('#spinner').css('display,inline-block');
-                $('#register').text('Loading..');
+            @auth
+            @if(Auth::user()->email_verified_at != NULL)
+            $("#register").on('click' , function() {
+                let btnVal = $(this).data('value');
+                $(this).text('').html('<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>');
                 $.ajax({
                     url : '{{route('register-course')}}',
                     method : 'POST',
                     data : {
                         'CourseID' : btnVal,
-                        '_token'   : '{{csrf_token()}}'
+                        '_token' : '{{csrf_token()}}',
                     },
                     success:function(res) {
                         if(res == 200) {
-                            $('#spinner').hide();
-                            $('#register').text('Done');
-                            $('#register').removeClass('btn-primary');
-                            $('#register').addClass('btn-success');
+                            $("#register").html('تم تسجيلك بالدورة بنجاح سيصلك ايميل برابط الحضور , فضلا تفقد البريد الغير هام').prop('disabled' , true)
                         } else {
-                            $('#spinner').hide();
-                            $('#register').text('not registered');
-                            $('#register').removeClass('btn-primary');
-                            $('#register').addClass('btn-danger');
+                            $("#register").html('<span class="text-white">you are already registered</span>').prop('disabled' , true)
                         }
                     }
-                });
-            });
-            </script>
+                })
+            })
+                @endif
+            @endauth
+        </script>
+{{--
 @endsection

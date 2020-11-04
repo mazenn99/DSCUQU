@@ -9,7 +9,7 @@
     @section('photo')
         <header id="header">
             <div class="header-body">
-                <div class="container">
+             {{--   <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="intro-text ">
@@ -21,6 +21,7 @@
                         </div>
                     </div><!-- /.row -->
                 </div><!-- /.container -->
+                --}}
             </div>
         </header>
     @endsection
@@ -34,7 +35,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="post-img-box">
-                                <img src="https://via.placeholder.com/760x350" alt="" class="img-responsive">
+                                <img src="{{asset('site/images/hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -53,9 +54,9 @@
                                                     <img src="images/post/post-author0-1.jpg" alt="" class="img-circle">
                                                     <div class="author-details">
                                                         <a href="#"
-                                                           class="text-capitalize">By {{$article->admin->name}}</a>
+                                                           class="text-capitalize">بواسطة  {{$article->admin->name}}</a>
                                                         <br> <br>
-                                                        <i class="fa fa-share-square"></i> <a href="#">Share </a>
+                                                        <i class="fa fa-share-square"></i> <a href="#">مشاركة </a>
                                                     </div>
                                                 </div>
                                                 <ul class="list-unstyled">
@@ -79,7 +80,7 @@
 
                         <div class="col-md-12 comments">
                             <div class="row">
-                                <h3>Comments</h3>
+                                <h3>التعليقات</h3>
                                 @foreach(\App\Models\Comments::where('article_id' , $article->id)->orderBy('id' , 'DESC')->get() as $comment)
                                     <div class="col-sm-12 comment-single-item">
                                         <div class="col-sm-1 img-box">
@@ -107,7 +108,8 @@
                             <div class="leave-comment-box">
                                 <div class="comment-respond">
                                     <div class="comment-reply-title">
-                                        <h3>اترك تعليقك</h3>
+                                        <h3 >اترك تعليقك</h3>
+                                         <div class="alert alert-success" style="display:none" id="successMsg">تم إرسال تعليقك</div>    
                                     </div>
                                     <div class="comment-form">
                                         <form method="POST" action="#">
@@ -121,7 +123,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="full-width">
-                                                        <button id="send" class="btn btn-success">ارسال التعليق</button>
+                                                        <button id="send" class="btn btn-warning" >ارسال التعليق</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,9 +140,7 @@
                                     <div class="col-md-4 col-sm-6 blog-single-item">
                                         <div class="blog-post">
                                             <figure>
-                                                <div class="figure-img"><img src="https://via.placeholder.com/760x350"
-                                                                             alt=""
-                                                                             class="img-responsive"></div>
+                                                <div class="figure-img"><img src="{{asset('site/images/hero-image/logoDSC.jpg')}}" alt="" class="img-responsive"></div>
                                                 <figcaption>
                                                     <div><a href="{{route('articles.show' , $articlesRelated->slug)}}"
                                                             class="read_more-btn">قرائة المزيد</a></div>
@@ -182,6 +182,7 @@
                    'article_id' : '{{$article->id}}'
                } , success : function (data) {
                    if(data == 200) {
+                      $("#successMsg").show();
                       location.reload();
                    } else {
                        console.log('failed')

@@ -17,7 +17,7 @@ class Comments extends Model
 
     public function checkUser() {
         if($this->users_id == '') {
-            return 'ANONYMOUS';
+            return 'بدون اسم';
         } else {
             return $this->users->name;
         }

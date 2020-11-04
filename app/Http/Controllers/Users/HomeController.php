@@ -144,30 +144,26 @@ class HomeController extends Controller
 
     public function certificate(Request $request) {
         if(!(Certificate::where(['courses_id' => $request->input('courseID') , 'users_id' => Auth::id()])->exists())) {
-            die("
-            fuck off from here | DO YOU THINK I'M STUPID TO MISS SOMETHING LIKE THIS
-                <br>
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-            ");
+           return abort('404');  
         }
         $Arabic = new Arabic('Glyphs');
         $course = Courses::select('title' , 'course_date')->where('id' , $request->input('courseID'))->first();
         $img = Image::make('site/images/certificate/certificate_attend.jpg');
         $img->text($Arabic->utf8Glyphs(Auth::user()->name) , 550 , 330 , function($font) {
-            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->file('site/fonts/stc_Light.ttf');
             $font->size($this::$NAME_SIZE_CERTIFICATE);
             $font->align('center');
             $font->valign('top');
         });
         $img->text($Arabic->utf8Glyphs($course->title) , 550 , 480 , function($font) {
-            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->file('site/fonts/stc_Light.ttf');
             $font->size($this::$TITLE_SIZE_CERTIFICATE);
             $font->color('#00000');
             $font->align('center');
             $font->valign('top');
         });
         $img->text($course->course_date , 400 , 591 , function($font) {
-            $font->file(base_path('public/site/fonts/stc_Light.ttf'));
+            $font->file('site/fonts/stc_Light.ttf');
             $font->size($this::$DATE_SIZE_CERTIFICATE);
             $font->align('left');
             $font->valign('top');

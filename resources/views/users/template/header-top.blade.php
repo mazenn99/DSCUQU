@@ -27,6 +27,9 @@
                         <li class='{{ Request::url() == url('/articles') ? 'active' : '' }}'><a data-scroll href="{{route('articles.index')}}">المقالات</a>
                         </li>
                         <li><a data-scroll href="#contact">اتصل بنا</a></li>
+                        @guest
+                            <li ><a data-scroll href="{{route('login')}}"> تسجيل - دخول </a></li>
+                        @endguest
                         @auth
                             <li><a data-scroll href="#">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
                                 <!-- dropdwon start -->
@@ -41,17 +44,14 @@
                                 </ul>
                                 <!-- dropdown end -->
                             </li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         @endauth
-                        @guest
-                            <li class='{{ Request::url() == url('/login') || Request::url() == url('register') ? 'active' : '' }}'><a href="{{route('login')}}"> تسجيل - دخول </a></li>
-                        @endguest
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
         </nav>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
         @yield('photo')
     </div>
     <!--  End header section-->

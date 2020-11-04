@@ -92,7 +92,7 @@
                     <div class="events-single-box">
                         <div class="row">
                             <div class="col-sm-5">
-                                <img src="{{asset('site/images/dsc-logo.png')}}" style="margin-top:22%;margin-left:5%;" alt="dsc-logo" width="50px" height="59px" class="img-responsive img-fluid">
+                                <img src="{{asset('site/images/hero-image/logoDSC.jpg')}}" alt="نادي الطلبة المطورين">
                             </div>
 
                             <div class="col-sm-7 event-info">
@@ -132,7 +132,7 @@
 
                                 <p>{{$course->details}}</p>
 
-                                <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">Read More<i
+                                <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">قرائة المزيد<i
                                         class="fa fa-long-arrow-right events-btn-icon"></i></a>
                             </div>
                         </div>

@@ -27,7 +27,7 @@
                     <div class="row all-corsess-wapper">
                         <div class="col-sm-12">
                             <div class="all-courses">
-                                <h3>اسم المتحدث  {{$speaker->name}}</h3>
+                                <h3>  اسم المتحدث والدورات المقدمة من  {{$speaker->name}}</h3>
                                 <h3> نبذه عن المتحدث </h3>
                                 <p>{{$speaker->overview}}</p>
                             </div>
@@ -35,7 +35,6 @@
                     </div>
                     <div class="row courses-instuctor">
                         <div class="col-sm-12">
-                            <h3 class="courses-title">الدورات المقدمه من  {{$speaker->name}}</h3>
                             <div class="row item-margin">
                                 @foreach(\App\Models\Courses::where('speaker_id' , $speaker->id)->get() as $course)
                                     <div class="col-sm-6 instractor-single py-2">

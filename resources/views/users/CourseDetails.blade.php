@@ -133,10 +133,10 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                         </div>
                                         <div class="col-sm-11">
                                             <div class="description-text-right">
-                                                <h3> About this event:</h3>
+                                                <h3> عن هذا الحدث</h3>
                                                 <p>{{$course->details}}</p>
 
-                                                <h3> Speaker:</h3>
+                                                <h3>المتحدث</h3>
                                                 <div class="col-sm-12 col-md-12">
                                                     <div class="more-events">
                                                         <div class="event-single-box">
@@ -155,8 +155,9 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                                                                     <div class="blog-content">
                                                                                         <div class="content-bottom ">
                                                                                             <h3 class="name">Mazen</h3>
-                                                                                            <h4 class="title">Events
-                                                                                                Speakers</h4>
+                                                                                            <h4 class="title">
+                                                                                                مقدم الدورة
+                                                                                                </h4>
                                                                                             <span
                                                                                                 class="more-events first-item"><a
                                                                                                     href="{{route('profile.show' , $course->speaker_id)}}">الملف الشخصي<i
@@ -171,28 +172,26 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
-
                                             </div>
                                         </div>
 
                                         <div class='col-sm-12 col-md-12'>
                                             <div class="jumbotron">
                                             @auth
-                                            <h3 dir='rtl' class="display-2">للتسجيل في الدورة</h3>
-                                            <p dir='rtl' class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط الدورة على ايميلك المسجل في موقعنا</p>
+                                            <h3 class="display-2">للتسجيل في الدورة</h3>
+                                            <p class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط الدورة على ايميلك المسجل في موقعنا</p>
                                                 <hr class="my-4">
                                             <p class="lead">
                                                 @if(Auth::user()->email_verified_at != NULL)
                                                     <button dir="rtl" data-value="{{$course->id}}" id="register" class="btn btn-success btn-block btn-lg mx-3">
                                                         للتسجيل اضغط هنا</button>
-                                                    @else
-                                                    <p dir='rtl' class="text-danger">يجب عليك تفعيل ايميلك بالضغط على الرابط المرسل الى ايميلك عند التسجيل</p>
-                                                    @endif
+                                                @else
+                                                    <p class="text-danger">يجب عليك تفعيل ايميلك بالضغط على الرابط المرسل الى ايميلك عند التسجيل</p>
+                                                @endif
                                             </p>
                                             @else
-                                            <p dir='rtl' class="text-danger">يجب
+                                            <p class="text-danger">يجب
                                                 <a href='{{route('register')}}'>التسجيل</a>
                                                 او
                                                 <a href='{{route('login')}}'>تسجيل الدخول</a>
@@ -230,7 +229,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                                                     <div class="content-bottom ">
                                                                         <p>{{\Illuminate\Support\Str::limit($lastCourse->details , 50)}}</p>
                                                                         <span class="first-item"><a
-                                                                                href="{{route('All-courses.show' , $lastCourse->slug)}}">Read More<i
+                                                                                href="{{route('All-courses.show' , $lastCourse->slug)}}">قرائة المزيد<i
                                                                                     class="fa fa-long-arrow-right blog-btn-icon"></i></a></span>
                                                                     </div>
                                                                 </div>
@@ -310,7 +309,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                         if(res == 200) {
                             $("#register").html('تم تسجيلك بالدورة بنجاح سيصلك ايميل برابط الحضور , فضلا تفقد البريد الغير هام').prop('disabled' , true)
                         } else {
-                            $("#register").html('<span class="text-white">you are already registered</span>').prop('disabled' , true)
+                            $("#register").html('<span class="text-white">انت مسجل مسبقا في الدورة</span>').prop('disabled' , true)
                         }
                     }
                 })

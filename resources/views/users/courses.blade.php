@@ -60,7 +60,7 @@
 
                                         <p>{{$course->details}}</p>
 
-                                        <a class="event-btn" href="#">Read More<i
+                                        <a class="event-btn" href="#">قرائة المزيد<i
                                                 class="fa fa-long-arrow-right events-btn-icon"></i></a>
                                     </div>
                                 </div>

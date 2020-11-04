@@ -1,7 +1,7 @@
 @extends('users.template.master')
 @section('title' , $article->title)
 @section('content')
-    <body class="post-1 home_version_03 home_version_02 home_version_04">
+    <body class="post-1 home_version_03 home_version_02">
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>
@@ -107,7 +107,7 @@
                             <div class="leave-comment-box">
                                 <div class="comment-respond">
                                     <div class="comment-reply-title">
-                                        <h3>Leave a Reply</h3>
+                                        <h3>اترك تعليقك</h3>
                                     </div>
                                     <div class="comment-form">
                                         <form method="POST" action="#">
@@ -116,12 +116,12 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <textarea id="dataComment" class="form-control" rows="8"
-                                                                  placeholder="Type Your Comments"></textarea>
+                                                                  placeholder="اكتب تعليقك هنا"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="full-width">
-                                                        <button id="send" class="btn btn-success">Send Comment</button>
+                                                        <button id="send" class="btn btn-success">ارسال التعليق</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,7 +133,7 @@
 
                         <div class="col-md-12 post_slider">
                             <div class="row">
-                                <h3>Last Posts</h3>
+                                <h3>اخر المقالات</h3>
                                 @foreach(\App\Models\Articles::orderBy('id' , 'DESC')->limit(3)->get() as $articlesRelated)
                                     <div class="col-md-4 col-sm-6 blog-single-item">
                                         <div class="blog-post">
@@ -143,7 +143,7 @@
                                                                              class="img-responsive"></div>
                                                 <figcaption>
                                                     <div><a href="{{route('articles.show' , $articlesRelated->slug)}}"
-                                                            class="read_more-btn">read more</a></div>
+                                                            class="read_more-btn">قرائة المزيد</a></div>
                                                 </figcaption>
                                             </figure>
                                             <div class="courses-content-box">
@@ -170,23 +170,20 @@
 @section('script')
     <script>
         // add comment
-        $('#send').click(function(e) { // this is event when
+        $('#send').click(function(e) { 
            e.preventDefault();
-           let data = $('#dataComment').val(); // here you get data from textarea
+           let data = $('#dataComment').val(); 
            $.ajax({
-               url : "{{route('save-comment')}}", // this is link you send through it
+               url : "{{route('save-comment')}}",
                type : "POST",
-               data : { // this is JSON data aysha send it to backend
+               data : { 
                    '_token' : '{{csrf_token()}}',
                    'comment' : data ,
                    'article_id' : '{{$article->id}}'
                } , success : function (data) {
                    if(data == 200) {
-                       // here you receive data from backend and you must check the number of status
-                       // you received and show the result to button
-                       console.log('success')
+                      location.reload();
                    } else {
-                       // here is if the data is failed of you receive any number different than 200
                        console.log('failed')
                    }
                }

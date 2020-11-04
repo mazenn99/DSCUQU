@@ -19,7 +19,7 @@
                         @isset($attendsLink)
                             <div class="form-group">
                                 <input type="text" class="form-control"
-                                       value="{{base_path() . '/attend-courses/'.$attendsLink->hash}}" disabled>
+                                       value="{{'https://www.dsc-uqu.com' . '/attend-courses/'.$attendsLink->hash}}" disabled>
                             </div>
                         @endisset
                         @include('admins._partial.success')

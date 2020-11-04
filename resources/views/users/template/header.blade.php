@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{config('app.local_ar')}}">
+<html class="no-js" dir="rtl" lang="{{app()->getLocale()}}">
 <head>
     <meta charset="utf-8">
     <script data-ad-client="ca-pub-4082826502663993" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -21,8 +21,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title' , 'نادي الطلبة المطورين')</title>
     <link rel="shortcut icon" href="{{asset('site')}}/images/fav-icon/dsc-logo-fav.png" type="image/x-icon" >
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('site')}}/css/assets/bootstrap.min.css">
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="{{asset('site')}}/css/assets/bootstrap.min.css"> 
+        
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('site')}}/css/assets/font-awesome.min.css">
     <!-- Google Fonts -->

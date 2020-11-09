@@ -150,7 +150,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 video-play-btn">
-                <a href="http://www.youtube.com/watch?v=DcN_hcHXR_0" class="video-iframe"><i class="fa fa-play"></i></a>
+                <a href="https://www.youtube.com/watch?v=DcN_hcHXR_0" class="video-iframe"><i class="fa fa-play"></i></a>
             </div>
         </div>
     </div>

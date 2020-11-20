@@ -58,6 +58,17 @@
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">
+                                    <label for="image" class=" form-control-label">Image</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="file" id="image" class="form-control-file" name="image">
+                                    @error('image')
+                                    <small class="text-danger form-text">{{$message}}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
                                     <label class=" form-control-label">Sex</label>
                                 </div>
                                 <div class="col col-md-9">
@@ -115,9 +126,17 @@
                                         <small class="text-danger form-text">{{$message}}</small>
                                         @enderror
                                     </div>
-
                                 </div>
                             </div>
+{{--                            <div class="row form-group">--}}
+{{--                                <div class="col col-md-3">--}}
+{{--                                    <label for="date_time" class=" form-control-label">Please select date and time</label>--}}
+{{--                                </div>--}}
+{{--                                <input type="datetime-local"  class="form-control" value="{{\Carbon\Carbon::now()}}" id="date_time" name="date_time">--}}
+{{--                                @error('date_time')--}}
+{{--                                <small class="text-danger form-text">{{$message}}</small>--}}
+{{--                                @enderror--}}
+{{--                            </div>--}}
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="date" class=" form-control-label">Course Date</label>
@@ -127,9 +146,9 @@
                                 <small class="text-danger form-text">{{$message}}</small>
                                 @enderror
                             </div>
-                            <div class="row form-group">
+                             <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="start_time" class=" form-control-label">Course start time</label>
+                                    <label for="date_time" class=" form-control-label">Please enter date and time</label>
                                 </div>
                                 <input type="time" id="start_time" name="start_time" class="form-control" value="{{$course->start_time}}">
                                 @error('start_time')
@@ -154,14 +173,14 @@
                                     <div class="form-check">
                                         <div class="radio">
                                             <label for="online" class="form-check-label ">
-                                                <input type="radio" id="online" name="type" @if($course->online == 1) checked @endif
-                                                class="form-check-input">Online
+                                                <input type="radio" id="online" name="type" @if($course->online == 1) checked @endif value="1"
+                                                       class="form-check-input">Online
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label for="offline" class="form-check-label ">
-                                                <input type="radio" id="offline" name="type" @if($course->online == 0) checked @endif
-                                                class="form-check-input">Offline
+                                                <input type="radio" id="offline" name="type" @if($course->online == 0) checked @endif value="2"
+                                                       class="form-check-input">Offline
                                             </label>
                                         </div>
                                         @error('type')
@@ -229,7 +248,7 @@
                                     <div class="form-check">
                                         <div class="checkbox">
                                             <label for="certificate" class="form-check-label ">
-                                                <input type="checkbox" id="certificate" name="certificate" @if($course->certificate) checked @endif class="form-check-input">Support
+                                                <input type="checkbox" id="certificate" name="certificate" value="1" @if($course->certificate) checked @endif class="form-check-input">Support
                                             </label>
                                             @error('certificate')
                                             <small class="text-danger form-text">{{$message}}</small>

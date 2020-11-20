@@ -135,11 +135,11 @@
                                {{-- <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">قراءة الزيد<i
                                         class="fa fa-long-arrow-right events-btn-icon"></i></a> --}}
                                         <br>
-                                @if($course->course_date < \Carbon\Carbon::now())
+                                @if($course->date_time < \Carbon\Carbon::now())
                                     <button class='btn btn-block btn-danger' disabled>التسجيل مغلق لانتهاء الفعالية</button>
                                     @else
-                                    <a href="{{route('All-courses.show' , $course->slug)}}" class='btn btn-block btn-success'>التسجيل مازال متاح</a>
-                                @endif       
+                                    <a href="{{route('All-courses.show' , $course->slug)}}" class='btn btn-block btn-success text-white'>التسجيل مازال متاح</a>
+                                @endif
                             </div>
                         </div>
                     </div>

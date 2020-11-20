@@ -64,12 +64,12 @@
 
                                      {{--   <a class="event-btn" href="#">قرائة المزيد<i
                                                 class="fa fa-long-arrow-right events-btn-icon"></i></a> --}}
-                                                
-                                       @if($course->course_date < \Carbon\Carbon::now())
+
+                                       @if($course->date_time < \Carbon\Carbon::now())
                                             <button class='btn btn-block btn-danger'>التسجيل مغلق لانتهاء الفعالية</button>
                                        @else
                                     <a href="{{route('All-courses.show' , $course->slug)}}" class='btn btn-block btn-success'>التسجيل مازال متاح</a>
-                                       @endif   
+                                       @endif
                                     </div>
                                 </div>
                             </div>

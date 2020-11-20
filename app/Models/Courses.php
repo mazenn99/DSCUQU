@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Courses extends Model
 {
 
-    protected $fillable = ['admins_id' , 'speaker_id' , 'title' , 'details' , 'picture' , 'slug' , 'sex' , 'levels' , 'course_date' , 'start_time' , 'end_time' , 'online' , 'type_courses_id' , 'collage_id' , 'status' , 'certificate' , 'maximum_attend' , 'live_url'];
+    protected $fillable = ['admins_id' , 'speaker_id' , 'date_time' , 'image' , 'title' , 'details' , 'picture' , 'slug' , 'sex' , 'levels' , 'course_date' , 'start_time' , 'end_time' , 'online' , 'type_courses_id' , 'collage_id' , 'status' , 'certificate' , 'maximum_attend' , 'live_url'];
 
     public function getSex() {
         if($this->sex == 1) {

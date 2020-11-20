@@ -32,7 +32,7 @@
                                 <div class="col-12 col-md-9">
                                     <select name="speaker" id="select" class="form-control">
                                         <option value="0">Please Select Speaker</option>
-                                        @foreach(\App\Models\Speakers::orderBy('id' , 'ASC')->get() as $speakers)
+                                        @foreach(\App\Models\Speakers::orderBy('id' , 'DESC')->get() as $speakers)
                                             <option value="{{$speakers->id}}">{{$speakers->name}}</option>
                                         @endforeach
                                     </select>
@@ -51,6 +51,17 @@
                                     <textarea name="details" id="details" rows="9"
                                               placeholder="please enter details of course" class="form-control">{{old('details')}}</textarea>
                                     @error('details')
+                                    radio   <small class="text-danger form-text">{{$message}}</small>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="image" class=" form-control-label">Image</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="file" id="image" class="form-control-file" name="image">
+                                    @error('image')
                                     <small class="text-danger form-text">{{$message}}</small>
                                     @enderror
                                 </div>
@@ -114,8 +125,16 @@
                                         <small class="text-danger form-text">{{$message}}</small>
                                         @enderror
                                     </div>
-
                                 </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="date_time" class=" form-control-label">Please select date and time</label>
+                                </div>
+                                <input type="datetime-local"  class="form-control" value="{{\Carbon\Carbon::now()}}" id="date_time" name="date_time">
+                                @error('date_time')
+                                <small class="text-danger form-text">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="row form-group">
                                 <div class="col col-md-3">

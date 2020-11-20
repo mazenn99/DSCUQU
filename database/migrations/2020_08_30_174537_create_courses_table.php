@@ -26,6 +26,7 @@ class CreateCoursesTable extends Migration
             $table->date('course_date');
             $table->time('start_time');
             $table->time('end_time');
+            $table->dateTime('date_time');
             $table->boolean('online')->comment('1 => online , 0 => offline');
             $table->unsignedBigInteger('type_courses_id');
             $table->unsignedBigInteger('collage_id');

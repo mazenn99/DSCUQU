@@ -51,10 +51,10 @@
             z-index: -1;
         }
 
-        .btn-primary
-        {color:#fff;
-            background-color:#337ab7;
-            border-color:#2e6da4
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4
         }
 
         .our-team .picture img {
@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-sm-12 ">
                             <div class="post-img-box">
-                                                                <img src="{{asset('site/images/hero-image/banner.png')}}" alt="نادي الطلبة المطورين">
+                                <img src="@if($course->image) {{asset('site/images/course-image') . '/' . $course->image }} @else {{asset('site/images/hero-image/banner.png')}} @endif" alt="نادي الطلبة المطورين">
 
                             </div>
                             {{-- <div class="clock-countdown">
@@ -118,19 +118,19 @@
                                 </div>
                                 <div class="description-text">
                                     <div class="row">
-                                      {{--  <div class="col-sm-1">
-                                                <div class="description-side-left">
-                                                <ul class="pst-social-icon list-unstyled">
+                                        {{--  <div class="col-sm-1">
+                                                  <div class="description-side-left">
+                                                  <ul class="pst-social-icon list-unstyled">
 
-                                                  <li><a href="https://www.twitter.com/dscuqu" target="_blank"
-                                                           class="fa fa-twitter twitter"></a></li>
-                                                    <li>
-                                                        <a href="https://www.youtube.com/channel/UCihwwL2n2OZ10oxvajU9duw/search"
-                                                           target="_blank" class="fa fa-youtube youtube"></a></li> 
+                                                    <li><a href="https://www.twitter.com/dscuqu" target="_blank"
+                                                             class="fa fa-twitter twitter"></a></li>
+                                                      <li>
+                                                          <a href="https://www.youtube.com/channel/UCihwwL2n2OZ10oxvajU9duw/search"
+                                                             target="_blank" class="fa fa-youtube youtube"></a></li>
 
-                                                </ul>
-                                            </div>
-                                        </div> --}}
+                                                  </ul>
+                                              </div>
+                                          </div> --}}
                                         <div class="col-sm-11">
                                             <div class="description-text-right">
                                                 <h3> عن هذا الحدث</h3>
@@ -157,7 +157,7 @@
                                                                                             <h3 class="name">{{$course->speakers->name}}</h3>
                                                                                             <h4 class="title">
                                                                                                 مقدم الدورة
-                                                                                                </h4>
+                                                                                            </h4>
                                                                                             <span
                                                                                                 class="more-events first-item"><a
                                                                                                     href="{{route('profile.show' , $course->speaker_id)}}">الملف الشخصي<i
@@ -176,35 +176,42 @@
                                             </div>
                                         </div>
 
-                                        @if($course->course_date < \Carbon\Carbon::now())
-                                            <button class='btn btn-block btn-danger'> الدورة منتيهة لايمكن التسجيل فيها </button>
-                                            @else
+                                        @if($course->date_time < \Carbon\Carbon::now())
+                                            <button class='btn btn-block btn-danger'> الدورة منتيهة لايمكن التسجيل
+                                                فيها
+                                            </button>
+                                        @else
                                             <div class='col-sm-12 col-md-12'>
-                                            <div class="jumbotron">
-                                            @auth
-                                            <h3 class="display-2">للتسجيل في الدورة</h3>
-                                            <p class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط الدورة على ايميلك المسجل في موقعنا</p>
-                                                <hr class="my-4">
-                                            <p class="lead">
-                                                @if(Auth::user()->email_verified_at != NULL)
-                                                    <button dir="rtl" data-value="{{$course->id}}" id="register" class="btn btn-success btn-block btn-lg mx-3">
-                                                        للتسجيل اضغط هنا</button>
-                                                @else
-                                                    <p class="text-danger">يجب عليك تفعيل ايميلك بالضغط على الرابط المرسل الى ايميلك عند التسجيل</p>
-                                                @endif
-                                            </p>
-                                            @else
-                                            <p class="text-danger">يجب
-                                                <a href='{{route('register')}}'>التسجيل</a>
-                                                او
-                                                <a href='{{route('login')}}'>تسجيل الدخول</a>
-                                                للتسجيل في الدورة
-                                            </p>
-                                            @endauth
+                                                <div class="jumbotron">
+                                                    @auth
+                                                        <h3 class="display-2">للتسجيل في الدورة</h3>
+                                                        <p class="lead">يمكنك التسجيل في الدورة بشكل مباشر وسيصلك رابط
+                                                            الدورة على ايميلك المسجل في موقعنا</p>
+                                                        <hr class="my-4">
+                                                        <p class="lead">
+                                                            @if(Auth::user()->email_verified_at != NULL)
+                                                                <button dir="rtl" data-value="{{$course->id}}"
+                                                                        id="register"
+                                                                        class="btn btn-success btn-block btn-lg mx-3">
+                                                                    للتسجيل اضغط هنا
+                                                                </button>
+                                                    @else
+                                                        <p class="text-danger">يجب عليك تفعيل ايميلك بالضغط على الرابط
+                                                            المرسل الى ايميلك عند التسجيل</p>
+                                                        @endif
+                                                        </p>
+                                                        @else
+                                                            <p class="text-danger">يجب
+                                                                <a href='{{route('register')}}'>التسجيل</a>
+                                                                او
+                                                                <a href='{{route('login')}}'>تسجيل الدخول</a>
+                                                                للتسجيل في الدورة
+                                                            </p>
+                                                        @endauth
+                                                </div>
                                             </div>
-                                        </div>
                                         @endif
-                                        
+
                                         <div class="col-sm-12 col-md-12">
                                             <div class="more-events">
                                                 <div class="row">
@@ -300,26 +307,26 @@
             --}}
             @auth
             @if(Auth::user()->email_verified_at != NULL)
-            $("#register").on('click' , function() {
+            $("#register").on('click', function () {
                 let btnVal = $(this).data('value');
                 $(this).text('').html('<i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>');
                 $.ajax({
-                    url : '{{route('register-course')}}',
-                    method : 'POST',
-                    data : {
-                        'CourseID' : btnVal,
-                        '_token' : '{{csrf_token()}}',
+                    url: '{{route('register-course')}}',
+                    method: 'POST',
+                    data: {
+                        'CourseID': btnVal,
+                        '_token': '{{csrf_token()}}',
                     },
-                    success:function(res) {
-                        if(res == 200) {
-                            $("#register").html('تم تسجيلك بالدورة بنجاح سيصلك ايميل برابط الحضور , فضلا تفقد البريد الغير هام').prop('disabled' , true)
+                    success: function (res) {
+                        if (res == 200) {
+                            $("#register").html('تم تسجيلك بالدورة بنجاح سيصلك ايميل برابط الحضور , فضلا تفقد البريد الغير هام').prop('disabled', true)
                         } else {
-                            $("#register").html('<span class="text-white">انت مسجل مسبقا في الدورة</span>').prop('disabled' , true)
+                            $("#register").html('<span class="text-white">انت مسجل مسبقا في الدورة</span>').prop('disabled', true)
                         }
                     }
                 })
             })
-                @endif
+            @endif
             @endauth
         </script>
 

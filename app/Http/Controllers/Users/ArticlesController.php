@@ -13,6 +13,9 @@ use PhpParser\Builder;
 
 class ArticlesController extends Controller
 {
+    public function __construct() {
+        return abort('503','Comming Soon');
+    }
     /**
      * Display a listing of the resource.
      *

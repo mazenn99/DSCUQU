@@ -19,11 +19,16 @@ class CourseConfirmationLink extends Mailable
     public $name;
     public $courseLink;
     public $courseTitle;
-    public function __construct($name , $title , $link)
+    public $courseDate;
+    public $startTime;
+    
+    public function __construct($name , $title , $link , $courseDate , $startTime)
     {
-        $this->name = $name;
-        $this->courseLink = $title;
-        $this->courseLink = $link;
+        $this->name       =  $name;
+        $this->courseLink =  $title;
+        $this->courseLink =  $link;
+        $this->courseDate =  $courseDate;
+        $this->startTime  =  $startTime;
     }
 
     /**

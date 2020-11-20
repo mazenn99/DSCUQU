@@ -24,8 +24,8 @@
                             <!-- dropdown end -->
                         </li>
 
-                        <li class='{{ Request::url() == url('/articles') ? 'active' : '' }}'><a data-scroll href="{{route('articles.index')}}">المقالات</a>
-                        </li>
+                       {{-- <li class='{{ Request::url() == url('/articles') ? 'active' : '' }}'><a data-scroll href="{{route('articles.index')}}">المقالات</-}}
+                        </li> --}}
                         <li><a data-scroll href="#contact">اتصل بنا</a></li>
                         @guest
                             <li ><a data-scroll href="{{route('login')}}"> تسجيل - دخول </a></li>

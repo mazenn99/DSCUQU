@@ -306,11 +306,32 @@
                                 </a>
                             </div>
                         </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="statistic__item statistic__item--green">
+                            <a href="{{route('certificate.index')}}">
+                                <h2 class="number">{{\App\Models\Certificate::count()}}</h2>
+                                <span class="desc">All Certificate</span>
+                                <div class="icon">
+                                    <i class="zmdi zmdi-account-o"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="statistic__item statistic__item--red">
+                            <a href="{{route('comments.index')}}">
+                                <h2 class="number">{{\App\Models\Comments::count()}}</h2>
+                                <span class="desc">All Comments</span>
+                                <div class="icon">
+                                    <i class="zmdi zmdi-money"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     @endif
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item statistic__item--orange">
                             <a href="{{route('courses.index')}}">
-
                                 <h2 class="number">
                                     @php
                                         if(Session::get('super')) {
@@ -346,19 +367,6 @@
                             </a>
                         </div>
                     </div>
-                    @if(Session::get('super'))
-                        <div class="col-md-6 col-lg-3">
-                            <div class="statistic__item statistic__item--green">
-                                <a href="{{route('certificate.index')}}">
-                                    <h2 class="number">{{\App\Models\Certificate::count()}}</h2>
-                                    <span class="desc">All Certificate</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-account-o"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    @endif
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
@@ -383,35 +391,6 @@
                             </a>
                         </div>
                     </div>
-                    @if(Session::get('super'))
-                        <div class="col-md-6 col-lg-3">
-                            <div class="statistic__item statistic__item--red">
-                                <a href="{{route('comments.index')}}">
-                                    <h2 class="number">{{\App\Models\Comments::count()}}</h2>
-                                    <span class="desc">All Comments</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-money"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    @endif
-                    @if(Session::get('super'))
-                        <div class="col-md-6 col-lg-3">
-                            <div class="statistic__item statistic__item--red">
-                                <a href="#">
-                                    <h2 class="number">{{\App\User::count()}}</h2>
-                                    <span class="desc">
-                                        male : <span>{{\App\User::where('sex' , 0)->count()}}</span> <br>
-                                        female : <span>{{\App\User::where('sex' , 1)->count()}}</span>
-                                    </span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-money"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    @endif
                 </div>
             </div>
         </section>

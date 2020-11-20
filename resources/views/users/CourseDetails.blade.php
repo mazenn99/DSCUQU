@@ -94,10 +94,10 @@
                     <div class="row">
                         <div class="col-sm-12 ">
                             <div class="post-img-box">
-                                <img src="{{asset('site/images/
-hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
+                                                                <img src="{{asset('site/images/hero-image/banner.png')}}" alt="نادي الطلبة المطورين">
+
                             </div>
-                            <div class="clock-countdown">
+                            {{-- <div class="clock-countdown">
                                 <div class="site-config"></div>
                                 <div class="coundown-timer">
                                     <div class="single-counter"><span class="days" id="timerDays">21</span><span class="normal">Days</span></div>
@@ -105,7 +105,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                     <div class="single-counter"><span class="minutes" id="timerMinutes">25</span><span class="normal">Minutes</span></div>
                                     <div class="single-counter single-chag-color"><span class="seconds" id="timerSeconds">48</span><span class="normal">Seconds</span></div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-sm-12">
                             <div class="description-content">
@@ -118,19 +118,19 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                 </div>
                                 <div class="description-text">
                                     <div class="row">
-                                        <div class="col-sm-1">
-                                            <div class="description-side-left">
+                                      {{--  <div class="col-sm-1">
+                                                <div class="description-side-left">
                                                 <ul class="pst-social-icon list-unstyled">
 
-                                                    <li><a href="https://www.twitter.com/dscuqu" target="_blank"
+                                                  <li><a href="https://www.twitter.com/dscuqu" target="_blank"
                                                            class="fa fa-twitter twitter"></a></li>
                                                     <li>
                                                         <a href="https://www.youtube.com/channel/UCihwwL2n2OZ10oxvajU9duw/search"
-                                                           target="_blank" class="fa fa-youtube youtube"></a></li>
+                                                           target="_blank" class="fa fa-youtube youtube"></a></li> 
 
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-sm-11">
                                             <div class="description-text-right">
                                                 <h3> عن هذا الحدث</h3>
@@ -154,7 +154,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
 
                                                                                     <div class="blog-content">
                                                                                         <div class="content-bottom ">
-                                                                                            <h3 class="name">Mazen</h3>
+                                                                                            <h3 class="name">{{$course->speakers->name}}</h3>
                                                                                             <h4 class="title">
                                                                                                 مقدم الدورة
                                                                                                 </h4>
@@ -176,7 +176,10 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                             </div>
                                         </div>
 
-                                        <div class='col-sm-12 col-md-12'>
+                                        @if($course->course_date < \Carbon\Carbon::now())
+                                            <button class='btn btn-block btn-danger'> الدورة منتيهة لايمكن التسجيل فيها </button>
+                                            @else
+                                            <div class='col-sm-12 col-md-12'>
                                             <div class="jumbotron">
                                             @auth
                                             <h3 class="display-2">للتسجيل في الدورة</h3>
@@ -200,11 +203,12 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                             @endauth
                                             </div>
                                         </div>
-
+                                        @endif
+                                        
                                         <div class="col-sm-12 col-md-12">
                                             <div class="more-events">
                                                 <div class="row">
-                                                    <h3>Upcoming Events</h3>
+                                                    <h3>الفعاليات القادمة</h3>
                                                     @foreach(\App\Models\Courses::orderBy('id' , 'DESC')->limit(3)->get() as $lastCourse)
                                                         <div class="col-sm-6 col-md-4 event-single">
                                                             <div class="event-single-box">
@@ -227,7 +231,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                                                                         {{--												</span>--}}
                                                                     </p>
                                                                     <div class="content-bottom ">
-                                                                        <p>{{\Illuminate\Support\Str::limit($lastCourse->details , 50)}}</p>
+                                                                        <p>{{\Illuminate\Support\Str::limit($lastCourse->details , 30)}}</p>
                                                                         <span class="first-item"><a
                                                                                 href="{{route('All-courses.show' , $lastCourse->slug)}}">قرائة المزيد<i
                                                                                     class="fa fa-long-arrow-right blog-btn-icon"></i></a></span>
@@ -251,7 +255,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
     @endsection
     @section('script')
         <script>
-            var timer;
+            {{-- var timer;
             function settimer()
             {
                 currentTime = new Date();
@@ -293,6 +297,7 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                 timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
             }
             settimer();
+            --}}
             @auth
             @if(Auth::user()->email_verified_at != NULL)
             $("#register").on('click' , function() {
@@ -317,5 +322,5 @@ hero-image/logoDSC.jpg')}}" alt="" class="img-responsive">
                 @endif
             @endauth
         </script>
-{{--
+
 @endsection

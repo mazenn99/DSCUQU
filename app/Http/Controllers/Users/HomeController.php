@@ -134,7 +134,7 @@ class HomeController extends Controller
                  $message->subject('contact us message');
                  $message->priority(3);
              });
-         return redirect()->back();
+         return redirect()->back()->with(['success' => 'تم ارسال رسالتك بنجاح']);
     }
 
 

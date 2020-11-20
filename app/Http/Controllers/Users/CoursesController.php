@@ -20,7 +20,7 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        $courses = Courses::where('status' , 1)->paginate(5);
+        $courses = Courses::orderBy('id' , 'DESC')->where('status' , 1)->paginate(5);
         return view('users.courses' , compact('courses'));
     }
 
@@ -62,10 +62,10 @@ class CoursesController extends Controller
     }
 
     public function registerAction(Request $request) {
-        $course = Courses::select('id' , 'live_url' , 'title')->find($request->input('CourseID'));
+        $course = Courses::select('id' , 'live_url' , 'title' , 'course_date' , 'start_time')->find($request->input('CourseID'));
         if(!($course->usersCourses()->where(['users_id' => Auth::id() , 'courses_id' => $course->id])->exists())) {
             $course->usersCourses()->attach(Auth::id());
-            Mail::to(Auth::user()->email)->send(new CourseConfirmationLink(Auth::user()->name , $course->title , $course->live_url));
+            Mail::to(Auth::user()->email)->send(new CourseConfirmationLink(Auth::user()->name , $course->title , $course->live_url , $course->course_date , $course->start_time));
             return 200;
         }
         return 201;

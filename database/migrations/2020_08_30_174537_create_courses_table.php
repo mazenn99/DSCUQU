@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->unsignedBigInteger('speaker_id');
             $table->string('title' , 50);
             $table->text('details');
+            $table->string('image' , 255)->nullable();
             $table->string('slug');
             $table->unsignedTinyInteger('sex')->comment('1 => male , 2 => female , 3 => both');
             $table->unsignedTinyInteger('levels')->comment('1 => bigger , 2 => intermediate , 3 => Advanced ');

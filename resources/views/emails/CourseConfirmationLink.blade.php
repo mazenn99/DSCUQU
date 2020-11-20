@@ -1,16 +1,23 @@
 @component('mail::message')
-# Dear {{$name}}
+{{-- # Dear {{$name}} --}}
 
-<bold>Confirm To Attend</bold> to course {{$courseTitle}}
+<bold>تأكيد الحضور</bold> لورشة{{$courseTitle}}
 <p>
-    this message to confirm to you to attend this course <br>
-    this Direct link to course
+   مرحباً,هذه الرسالة لتأكيد حضورك     <br>
+   ولحضور هذا الحدث مباشرة قم بالدخول على هذا الرابط 
 </p>
 {{$courseLink}}
+<br> 
+ستقام الدورة بتاريخ {{$courseDate}}
+في تمام الساعة {{$startTime}}
+<br>
+متشوقين الى لقائك 
 {{--@component('mail::button', ['url' => $courseLink])--}}
 {{--Course Link--}}
 {{--@endcomponent--}}
 
-Regards,<br>
-{{ config('app.name') }}
+مع تحيات,<br>
+{{ config('app.name-ar') }}
 @endcomponent
+
+

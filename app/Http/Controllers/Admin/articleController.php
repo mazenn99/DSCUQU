@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class articleController extends Controller
 {
+    public function __construct() {
+        return abort('401');
+    }
     /**
      * Display a listing of the resource.
      *

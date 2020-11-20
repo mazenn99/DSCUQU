@@ -92,7 +92,7 @@
                     <div class="events-single-box">
                         <div class="row">
                             <div class="col-sm-5">
-                                <img src="{{asset('site/images/hero-image/logoDSC.jpg')}}" alt="نادي الطلبة المطورين">
+                                <img src="{{asset('site/images/hero-image/banner.png')}}" alt="نادي الطلبة المطورين">
                             </div>
 
                             <div class="col-sm-7 event-info">
@@ -132,8 +132,14 @@
 
                                 <p>{{$course->details}}</p>
 
-                                <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">قرائة المزيد<i
-                                        class="fa fa-long-arrow-right events-btn-icon"></i></a>
+                               {{-- <a class="event-btn" href="{{route('All-courses.show' , $course->slug)}}">قراءة الزيد<i
+                                        class="fa fa-long-arrow-right events-btn-icon"></i></a> --}}
+                                        <br>
+                                @if($course->course_date < \Carbon\Carbon::now())
+                                    <button class='btn btn-block btn-danger' disabled>التسجيل مغلق لانتهاء الفعالية</button>
+                                    @else
+                                    <a href="{{route('All-courses.show' , $course->slug)}}" class='btn btn-block btn-success'>التسجيل مازال متاح</a>
+                                @endif       
                             </div>
                         </div>
                     </div>

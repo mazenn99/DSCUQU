@@ -24,6 +24,9 @@
 
 					<form action="{{route('send-contact-us-message')}}" method="POST">
 					    @csrf
+					    @if(session('success'))
+					        <div class='alert alert-success'>{{session()->get('success')}}</div>
+					    @endif
 						<fieldset class="form-group">
                             <input type="email" class="form-control rounded-0" name="email"  placeholder="الإيميل"> </fieldset>
                             @error('email')
@@ -55,12 +58,12 @@
 					<div class="col-md-12 col-sm-12 footer-no-padding text-center" style="">
 					 <p>Copyright © <br> تمت برمجة الموقع بواسطة قادة نادي الطلبة المطورين
 					 <br>
-					 <a href="https://www.twitter.com/aaysha15" target="_blank">@aysha</a>
+					 <a href="https://www.twitter.com/aaysha15" target="_blank">aysha</a>
 					 &&
-					 <a href="https://www.twitter.com/mazenn99" target="_blank">@mazen</a>
-                        <!--Made with ❤️ by <a href="https://www.twitter.com/mazenn99">@mazenn99</a>  also with ❤️ by-->
+					 <a href="https://www.twitter.com/mazenn99" target="_blank">mazen</a>
+                        {{-- <!--Made with ❤️ by <a href="https://www.twitter.com/mazenn99">@mazenn99</a>  also with ❤️ by-->
                         <!--<a href="https://twitter.com/aaysha15">@aaysha15.</a>-->
-                        <!--To our lovely Community ❤️-->
+                        <!--To our lovely Community ❤️--> --}}
                     </p>
 					</div>
 				</div>
@@ -68,7 +71,7 @@
 		</div>
 	</div><!-- ./ End footer-bottom -->
 </footer><!-- ./ End Footer Area section -->
-
+{{--
 @auth
     @if(Auth::user()->email_verified_at != NULL)
         <div class="modal" id="verificationModal">
@@ -92,6 +95,7 @@
         </div>
     @endif
 @endauth
+--}}
 
 <!-- ============================
 JavaScript Files

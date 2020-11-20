@@ -37,6 +37,7 @@
                         <div class="col-sm-12">
                             <div class="row item-margin">
                                 @foreach(\App\Models\Courses::where('speaker_id' , $speaker->id)->get() as $course)
+                                <a href="{{route('All-courses.show' , $course->slug)}}" target="_blank">
                                     <div class="col-sm-6 instractor-single py-2">
                                         <div class="instractor-courses-single">
                                             {{--<div class="img-box">
@@ -50,7 +51,7 @@
                                                     {{--<p><a href="">{{$speaker->name}}</a></p>--}}
                                                 </div>
                                                 <div class="text-bottom">
-                                                    <h3><a href="#">{{$course->title}}</a></h3>
+                                                    <h3><a href="{{route('All-courses.show' , $course->slug)}}">{{$course->title}}</a></h3>
                                                     <p>
                                                         {{$course->details}}
                                                     </p>
@@ -65,6 +66,7 @@
                                             --}}
                                         </div>
                                     </div>
+                                </a>
                                 @endforeach
                             </div>
                         </div>

@@ -233,7 +233,7 @@
                                                                     <div class="content-bottom ">
                                                                         <p>{{\Illuminate\Support\Str::limit($lastCourse->details , 30)}}</p>
                                                                         <span class="first-item"><a
-                                                                                href="{{route('All-courses.show' , $lastCourse->slug)}}">قرائة المزيد<i
+                                                                                href="{{route('All-courses.show' , $lastCourse->slug)}}">قراءة المزيد<i
                                                                                     class="fa fa-long-arrow-right blog-btn-icon"></i></a></span>
                                                                     </div>
                                                                 </div>

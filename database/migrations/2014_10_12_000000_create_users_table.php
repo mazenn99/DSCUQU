@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('subscription')->default('0');
             $table->unsignedTinyInteger('sex')->comment('0 => male , 1 =>female');
             $table->rememberToken();
             $table->timestamps();

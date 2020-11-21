@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCourseRequest;
+use App\Mail\newCourse;
 use App\Models\attendCourses;
 use App\Models\Courses;
 use App\UserCourses;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use MongoDB\Driver\Session;
 use Psy\Util\Str;
 
@@ -59,7 +61,7 @@ class CRUDCoursesController extends Controller
      */
     public function store(CreateCourseRequest $request)
     {
-        Courses::create([
+        $course = Courses::create([
             'admins_id' => Auth::id(),
             'speaker_id' => $request->input('speaker'),
             'details' => $request->input('details'),
@@ -80,6 +82,10 @@ class CRUDCoursesController extends Controller
             'maximum_attend' => $request->input('attend'),
             'live_url' => $request->input('live'),
         ]);
+        $userSub = \App\User::select('email')->where('subscription' , 1)->get();
+        foreach($userSub as $sub) {
+            Mail::to($sub->email)->send(new newCourse($course->title , $course->course_date , $course->details , $course->start_time , $course->slug));
+        }
         return redirect()->to(route('courses.index'))->with(['msg' => 'Successfully Added Courses']);
     }
 

@@ -148,7 +148,7 @@
                             </div>
                              <div class="row form-group">
                                 <div class="col col-md-3">
-                                    <label for="date_time" class=" form-control-label">Please enter date and time</label>
+                                    <label for="date_time" class=" form-control-label">Course start time</label>
                                 </div>
                                 <input type="time" id="start_time" name="start_time" class="form-control" value="{{$course->start_time}}">
                                 @error('start_time')
